@@ -1,10 +1,10 @@
-from netboxcli.core import Core
+from netboxCli.core import Core
 
-from netboxcli.virtualization.vms import Vms
-from netboxcli.virtualization.interfaces import Interfaces
-from netboxcli.virtualization.clusters import Clusters
-from netboxcli.virtualization.cluster_types import ClusterTypes
-from netboxcli.virtualization.cluster_groups import ClusterGroups
+from .vms import Vms
+from .interfaces import Interfaces
+from .clusters import Clusters
+from .cluster_types import ClusterTypes
+from .cluster_groups import ClusterGroups
 
 
 

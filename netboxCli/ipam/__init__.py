@@ -1,4 +1,4 @@
-from netboxcli.core import Core
+from netboxCli.core import Core
 
 from .ip_addresses import IpAddresses
 from .ip_ranges import IpRanges

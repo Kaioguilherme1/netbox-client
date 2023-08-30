@@ -2,19 +2,22 @@
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[tool.poetry]
+[project]
 name = "netboxcli"
-version = "0.2.0"
+version = "0.3.0"
+authors = [
+  { name="kaio Guilherme", email="kaioguilherme444@outlook.com" },
+]
 description = "A Python package to interact with the NetBox API."
-authors = ["https://github.com/Kaioguilherme1"]
-license = "MIT"
+readme = "README.md"
+requires-python = ">=3.6"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
 
-[tool.poetry.dependencies]
-python = "^3.6"
-requests = "^2.26.0"
+[project.urls]
+"Homepage" = "https://github.com/Kaioguilherme1/netbox-client"
+"Bug Tracker" = "https://github.com/Kaioguilherme1/netbox-client/issues"
 
-[tool.poetry.dev-dependencies]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"

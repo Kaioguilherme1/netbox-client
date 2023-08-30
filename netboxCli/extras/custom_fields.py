@@ -1,17 +1,5 @@
-# Lista de dados de teste
-teste = [
-    ['config_contexts', 'ConfigContexts'],
-    ['config_templates', 'ConfigTemplates'],
-    ['custom_fields', 'CustomFields'],
-    ['custom_links', 'CustomLinks'],
-    ['export_templates', 'ExportTemplates'],
-    ['saved_filters', 'SavedFilters'],
-    ['tags', 'Tags'],
-]
 
-# Conteúdo da classe base
-class_content = '''
-class {class_name}:
+class CustomFields:
     """
     this class is used to create, retrieve, update, and delete resources of netbox api.
 
@@ -78,16 +66,3 @@ class {class_name}:
     def delete(self, id: int):
         """Delete a resource based on its ID."""
         return self._core.delete(id)
-'''
-
-# Criar arquivos .py com classes
-for item in teste:
-    filename = f"{item[0]}.py"
-    class_name = item[1]
-
-    with open(filename, 'w') as file:
-        file.write(class_content.format(class_name=class_name))
-
-    print(f"Arquivo '{filename}' criado com a classe '{class_name}'.")
-
-print("Processo concluído.")

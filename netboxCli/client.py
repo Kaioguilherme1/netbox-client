@@ -1,12 +1,14 @@
 import requests
 from .virtualization import Virtualization as vitualization
 from .ipam import Ipam as ipam
+from .extras import Extras as extras
+
 
 class Client:
     def __init__(self, API_IP, API_TOKEN):
         self.virtualization = vitualization(self)
         self.ipam = ipam(self)
-
+        self.extras = extras(self)
 
         self._base_url = API_IP
         self._token = API_TOKEN

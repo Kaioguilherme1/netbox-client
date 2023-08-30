@@ -132,17 +132,16 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 - [x]  **Virtualização:** Gerencie máquinas virtuais de maneira eficaz, desde a criação até a exclusão.
 - [ ]  **Circuits:** Gerencie circuitos de rede, como conexões de fibra óptica e links externos.
 - [ ]  **Power:** Acesse informações relacionadas ao fornecimento de energia e energia de seus dispositivos.
-- [ ]  **Extras:** Integração com plugins e extensões adicionais para funcionalidades personalizadas.
+- [x]  **Extras:** Integração com plugins e extensões adicionais para funcionalidades personalizadas.
 
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 0.2.0
+## 📌 Versão 0.3.0
 
-### **Adições na Versão 0.2.0**
+### **Adições na Versão 0.3.0**
 
-- **Virtualização:** Gerencie máquinas virtuais de maneira eficaz, desde a criação até a exclusão.
-- **IPAM:** Simplifique a gestão de blocos de endereços IP, facilitando a adição, recuperação e atualização.
+- **EXTRAS:** Integração com plugins e extensões adicionais para funcionalidades personalizadas.
 
 ## ✒️ Autores
 
