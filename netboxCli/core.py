@@ -8,7 +8,8 @@ class Core:
         data['slug'] = self._netbox._slug(data['name'])
         return self._netbox._request('post',f'{self._endpoint}', data)
 
-    def get(self, id: int = None, name: str = None):
+    def get(self, id: int = None, name: str = None, tags: list = None, limit: int = 1000):
+
         if not id and name:
             id = self._netbox._get_id(name,f'{self._endpoint}')
 
@@ -16,8 +17,23 @@ class Core:
                 return self._netbox._request('get', f'{self._endpoint}?id={id}')['results'][0]
             else:
                 return None
+
+
         else:
-            return self._netbox._request('get', f'{self._endpoint}')['results']
+            response = self._netbox._request('get', f'{self._endpoint}?limit={limit}')['results']
+
+            if tags:
+                filtered_resources = []
+                slug_tags = [self._netbox._slug(tag) for tag in tags]
+                for item in response:
+                    if item['tags']:
+                        for tag in item['tags']:
+                            if tag['slug'] in slug_tags:
+                                filtered_resources.append(item)
+
+                return filtered_resources
+            else:
+                return response
 
     def update(self, data):
         return self._netbox._request('put',f'{self._endpoint}', data)

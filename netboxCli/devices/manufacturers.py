@@ -1,17 +1,5 @@
-# Lista de dados de teste
-teste = [
-    ['config_contexts', 'ConfigContexts'],
-    ['config_templates', 'ConfigTemplates'],
-    ['custom_fields', 'CustomFields'],
-    ['custom_links', 'CustomLinks'],
-    ['export_templates', 'ExportTemplates'],
-    ['saved_filters', 'SavedFilters'],
-    ['tags', 'Tags'],
-]
 
-# Conteúdo da classe base
-class_content = '''
-class {class_name}:
+class Manufacturers:
     """
     this class is used to create, retrieve, update, and delete resources of netbox api.
 
@@ -31,7 +19,7 @@ class {class_name}:
             Returns:
                 dict: Data of the created resource.
 
-        get(id=None, name=None):
+        get(id=None, name=None, tags=None):
             Retrieve a resource based on ID or name.
 
             Args:
@@ -67,9 +55,9 @@ class {class_name}:
         """Create a new resource using the provided data."""
         return self._core.create(data)
 
-    def get(self, id: int = None, name: str = None):
+    def get(self, id: int = None, name: str = None, tags: list = None, limit: int = 1000):
         """Retrieve a resource based on ID or name."""
-        return self._core.get(id, name)
+        return self._core.get(id, name, tags, limit)
 
     def update(self, data):
         """Update an existing resource."""
@@ -78,16 +66,3 @@ class {class_name}:
     def delete(self, id: int):
         """Delete a resource based on its ID."""
         return self._core.delete(id)
-'''
-
-# Criar arquivos .py com classes
-for item in teste:
-    filename = f"{item[0]}.py"
-    class_name = item[1]
-
-    with open(filename, 'w') as file:
-        file.write(class_content.format(class_name=class_name))
-
-    print(f"Arquivo '{filename}' criado com a classe '{class_name}'.")
-
-print("Processo concluído.")

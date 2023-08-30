@@ -19,7 +19,7 @@ class Vlans:
             Returns:
                 dict: Data of the created resource.
 
-        get(id=None, name=None):
+        get(id=None, name=None, tags=None):
             Retrieve a resource based on ID or name.
 
             Args:
@@ -55,9 +55,9 @@ class Vlans:
         """Create a new resource using the provided data."""
         return self._core.create(data)
 
-    def get(self, id: int = None, name: str = None):
+    def get(self, id: int = None, name: str = None, tags: list = None, limit: int = 1000):
         """Retrieve a resource based on ID or name."""
-        return self._core.get(id, name)
+        return self._core.get(id, name, tags, limit)
 
     def update(self, data):
         """Update an existing resource."""

@@ -1,6 +1,6 @@
 from netboxCli.core import Core
 
-from .vms import Vms
+from .virtual_machines import VirtualMachines
 from .interfaces import Interfaces
 from .clusters import Clusters
 from .cluster_types import ClusterTypes
@@ -29,7 +29,7 @@ class Virtualization:
         Args:
             netbox (obj): Netbox API instance.
         """
-        self.vms = Vms(Core(netbox, '/api/virtualization/virtual-machines/'))
+        self.virtual_machines = VirtualMachines(Core(netbox, '/api/virtualization/virtual-machines/'))
         self.interfaces = Interfaces(Core(netbox, '/api/virtualization/interfaces/'))
         self.clusters = Clusters(Core(netbox, '/api/virtualization/clusters/'))
         self.cluster_types = ClusterTypes(Core(netbox, '/api/virtualization/cluster-types/'))

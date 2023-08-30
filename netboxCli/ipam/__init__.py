@@ -44,4 +44,3 @@ class Ipam:
 __all__ = ['Ipam']
 
 
-

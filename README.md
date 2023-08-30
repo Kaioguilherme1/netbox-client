@@ -33,10 +33,10 @@
 
 Apresentar formas de baixar seu projeto.
 
-[Baixar projeto](https://github.com/Kaioguilherme1/Modelos_e_padroes/archive/refs/heads/main.zip)
-#### Baixar via terminal.
+[Baixar projeto](https://github.com/Kaioguilherme1/netbox-client/archive/refs/heads/main.zip)
+#### Baixar o pacote via terminal.
 ```
-git clone https://github.com/Kaioguilherme1/Modelos_e_padroes.git
+pip install netboxcli
 ```
 ## ⚙️ Uso
 
@@ -123,8 +123,8 @@ oferecendo uma alternativa conveniente para os administradores de rede que desej
 
 Aqui está um checklist do que está atualmente disponível no NetboxCli e do que será adicionado no futuro:
 
-- [ ]  **Organization:** Gerencie informações sobre organizações e empresas associadas aos seus recursos de rede.
-- [ ]  **Devices:** Acesse e gerencie dispositivos de rede, incluindo servidores, roteadores e switches.
+- [x]  **Organization:** Gerencie informações sobre organizações e empresas associadas aos seus recursos de rede.
+- [x]  **Devices:** Acesse e gerencie dispositivos de rede, incluindo servidores, roteadores e switches.
 - [ ]  **Connections:** Interaja com conexões físicas e lógicas entre dispositivos de rede.
 - [ ]  **Wireless:** Gerencie redes sem fio, pontos de acesso e configurações de Wi-Fi.
 - [x]  **IPAM:** Simplifique a gestão de blocos de endereços IP, facilitando a adição, recuperação e atualização.
@@ -137,11 +137,15 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 0.3.0
+## 📌 Versão 0.5.0
 
 ### **Adições na Versão 0.3.0**
 
-- **EXTRAS:** Integração com plugins e extensões adicionais para funcionalidades personalizadas.
+- **Organization:** Gerencie informações sobre organizações e empresas associadas aos seus recursos de rede.
+- **Devices:** Acesse e gerencie dispositivos de rede, incluindo servidores, roteadores e switches.
+
+- **Filter tags:** agora o get pode ser filtrado por tags, basta passar o parametro tags com uma lista de tags que deseja filtrar.
+- **limite de resultados:** agora o get pode ser limitado, basta passar o parametro limit com o numero de resultados que deseja.
 
 ## ✒️ Autores
 
