@@ -47,25 +47,3 @@ class Devices:
 
 __all__ = ['Devices']
 
-list = [
-    ['devices', 'DevicesClass'],
-    ['modules', 'Modules'],
-    ['devices_roles', 'DevicesRoles'],
-    ['platforms', 'Platforms'],
-    ['virtual_chassis', 'VirtualChassis'],
-    ['virtual_chassis_contexts', 'VirtualChassisContexts'],
-    ['device_types', 'DeviceTypes'],
-    ['modules_types', 'ModulesTypes'],
-    ['manufacturers', 'Manufacturers'],
-    ['interfaces', 'Interfaces'],
-    ['front_ports', 'FrontPorts'],
-    ['rear_ports', 'RearPorts'],
-    ['console_ports', 'ConsolePorts'],
-    ['console_server_ports', 'ConsoleServerPorts'],
-    ['power_ports', 'PowerPorts'],
-    ['power_outlets', 'PowerOutlets'],
-    ['modules_bays', 'ModulesBays'],
-    ['inventory_items', 'InventoryItems'],
-    ['inventory_items_roles', 'InventoryItemsRoles'],
-
-]

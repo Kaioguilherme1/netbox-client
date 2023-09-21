@@ -1,6 +1,7 @@
 import requests
 from .organization import Organization
 from .devices import Devices
+from .connections import Connections
 from .virtualization import Virtualization
 from .ipam import Ipam
 from .extras import Extras
@@ -10,6 +11,7 @@ class Client:
     def __init__(self, API_IP, API_TOKEN):
         self.organization = Organization(self)
         self.devices = Devices(self)
+        self.connections = Connections(self)
         self.virtualization = Virtualization(self)
         self.ipam = Ipam(self)
         self.extras = Extras(self)

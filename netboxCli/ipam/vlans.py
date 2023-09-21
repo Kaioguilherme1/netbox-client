@@ -55,9 +55,9 @@ class Vlans:
         """Create a new resource using the provided data."""
         return self._core.create(data)
 
-    def get(self, id: int = None, name: str = None, tags: list = None, limit: int = 1000):
+    def get(self, id: int = None, name: str = None, tags: list = None, search: str = None, limit: int = 1000):
         """Retrieve a resource based on ID or name."""
-        return self._core.get(id, name, tags, limit)
+        return self._core.get(id, name, tags, search, limit)
 
     def update(self, data):
         """Update an existing resource."""

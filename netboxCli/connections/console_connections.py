@@ -1,5 +1,5 @@
 
-class Services:
+class ConsoleConnections:
     """
     this class is used to create, retrieve, update, and delete resources of netbox api.
 

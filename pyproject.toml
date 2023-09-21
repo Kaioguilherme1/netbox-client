@@ -4,11 +4,11 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "netboxcli"
-version = "0.5.0"
+version = "0.6.0"
 authors = [
   { name="kaio Guilherme", email="kaioguilherme444@outlook.com" },
 ]
-description = "A Python package to interact with the NetBox API.\\nVersion 0.5.0\\n  - Resources:\\n    * organizations\\n    * Devices\\n    * Ipam\\n    * Virtualization\\n    * Extras"
+description = "A Python package to interact with the NetBox API."
 
 readme = "README.md"
 requires-python = ">=3.6"
