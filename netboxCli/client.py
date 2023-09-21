@@ -3,9 +3,14 @@ from .organization import Organization
 from .devices import Devices
 from .connections import Connections
 from .wireless import Wireless
-from .virtualization import Virtualization
 from .ipam import Ipam
-from .extras import Extras
+from .overlay import Overlay
+from .virtualization import Virtualization
+from .circuits import Circuits
+from .power import Power
+from .provisioning import Provisioning
+from .customization import Customization
+from .operations import Operations
 
 
 class Client:
@@ -14,9 +19,14 @@ class Client:
         self.devices = Devices(self)
         self.connections = Connections(self)
         self.wireless = Wireless(self)
-        self.virtualization = Virtualization(self)
         self.ipam = Ipam(self)
-        self.extras = Extras(self)
+        self.overlay = Overlay(self)
+        self.virtualization = Virtualization(self)
+        self.circuits = Circuits(self)
+        self.power = Power(self)
+        self.provisioning = Provisioning(self)
+        self.customization = Customization(self)
+        self.operations = Operations(self)
 
         self._base_url = API_IP
         self._token = API_TOKEN

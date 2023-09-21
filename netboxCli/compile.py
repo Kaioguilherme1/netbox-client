@@ -53,16 +53,6 @@ api = [
         ['wireless_lan_groups', 'WirelessLanGroups']
     ]],
 
-    ['extras',[
-        ['config_contexts', 'ConfigContexts'],
-        ['config_templates', 'ConfigTemplates'],
-        ['custom_fields', 'CustomFields'],
-        ['custom_links', 'CustomLinks'],
-        ['export_templates', 'ExportTemplates'],
-        ['saved_filters', 'SavedFilters'],
-        ['tags', 'Tags']
-    ]],
-
     ['ipam',[
         ['ip_addresses', 'IpAddresses'],
         ['ip_ranges', 'IpRanges'],
@@ -81,6 +71,11 @@ api = [
         ['services', 'Services']
     ]],
 
+    ['overlay',[
+        ['l2vpns', 'L2vpns'],
+        ['terminations', 'Terminations'],
+    ]],
+
     ['virtualization',[
         ['cluster_groups', 'ClusterGroups'],
         ['cluster_types', 'ClusterTypes'],
@@ -89,6 +84,43 @@ api = [
         ['interfaces', 'Interfaces']
     ]],
 
+    ['Circuits',[
+        ['circuits', 'CircuitsClass'],
+        ['circuit_types', 'CircuitTypes'],
+        ['providers', 'Providers'],
+        ['provider_accounts', 'ProviderAccounts'],
+        ['provider_networks', 'ProviderNetworks'],
+    ]],
+
+    ['power',[
+        ['power_feeds', 'PowerFeeds'],
+        ['power_panels', 'PowerPanels'],
+    ]],
+
+    ['Provisioning',[
+        ['config_contexts', 'ConfigContexts'],
+        ['config_templates', 'ConfigTemplates'],
+    ]],
+
+    ['Customization', [
+        ['custom_fields', 'CustomFields'],
+        ['custom_field_choices', 'CustomFieldChoices'],
+        ['custom_links', 'CustomLinks'],
+        ['export_templates', 'ExportTemplates'],
+        ['saved_filters', 'SavedFilters'],
+        ['tags', 'Tags'],
+        ['image_attachments', 'ImageAttachments'],
+        ['reports', 'Reports'],
+        ['scripts', 'Scripts'],
+    ]],
+
+    ['Operations', [
+        ['data_sources', 'DataSources'],
+        ['webhooks', 'Webhooks'],
+        ['jobs', 'Jobs'],
+        ['journal_entries', 'JournalEntries'],
+        ['change_log', 'ChangeLog'],
+    ]]
 ]
 
 # Conteúdo da classe base

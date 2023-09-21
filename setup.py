@@ -3,20 +3,25 @@ from setuptools import setup, find_packages
 # Description of your package
 DESCRIPTION = (
     '''A Python package to interact with the NetBox API.
-        Version 0.7.0
+        Version 1.0.0
        - Resources:
        * organizations
-       * Devices
-       * Connections
-       * Wireless
-       * Ipam
-       * Virtualization
-       * Extras        
+       * devices
+       * connections
+       * wireless
+       * ipam
+       * overlay
+       * virtualization
+       * circuits
+       * power
+       * provisioning
+       * customization
+       * operations      
                ''')
 
 setup(
     name='netboxCli',
-    version='0.7.0',
+    version='1.0.0',
     description=DESCRIPTION,
     packages=find_packages(),
     install_requires=[
