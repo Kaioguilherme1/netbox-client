@@ -35,3 +35,4 @@ venv/
 # Main Python script
 main.py
 compile.py
+update.sh

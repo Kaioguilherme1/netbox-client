@@ -44,4 +44,8 @@ class Core:
         return self._netbox._request('put',f'{self._endpoint}', data)
 
     def delete(self, id: int):
-        return self._netbox._request('delete', f'{self._endpoint}{id}/')
+        response = self._netbox._request('delete', f'{self._endpoint}{id}/')
+        if response[0] != 204:
+            return [False, response[0], response[1]]
+        else:
+            return [True,response[0],response[1]]

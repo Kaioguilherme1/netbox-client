@@ -2,6 +2,7 @@ import requests
 from .organization import Organization
 from .devices import Devices
 from .connections import Connections
+from .wireless import Wireless
 from .virtualization import Virtualization
 from .ipam import Ipam
 from .extras import Extras
@@ -12,6 +13,7 @@ class Client:
         self.organization = Organization(self)
         self.devices = Devices(self)
         self.connections = Connections(self)
+        self.wireless = Wireless(self)
         self.virtualization = Virtualization(self)
         self.ipam = Ipam(self)
         self.extras = Extras(self)
@@ -33,8 +35,8 @@ class Client:
         if response.status_code == 200:
             return response.json()
         else:
-            print(f'Error {response.status_code}: {response.text}')
-            return None
+            print(f'Status {response.status_code}: {response.text}')
+            return [response.status_code, response.text]
 
     def _get_id(self, name, endpoint):
         if name:

@@ -126,7 +126,7 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 - [x]  **Organization:** Gerencie informações sobre organizações e empresas associadas aos seus recursos de rede.
 - [x]  **Devices:** Acesse e gerencie dispositivos de rede, incluindo servidores, roteadores e switches.
 - [x]  **Connections:** Interaja com conexões físicas e lógicas entre dispositivos de rede.
-- [ ]  **Wireless:** Gerencie redes sem fio, pontos de acesso e configurações de Wi-Fi.
+- [x]  **Wireless:** Gerencie redes sem fio, pontos de acesso e configurações de Wi-Fi.
 - [x]  **IPAM:** Simplifique a gestão de blocos de endereços IP, facilitando a adição, recuperação e atualização.
 - [ ]  **Overlay:** Suporte para redes de sobreposição, como VPNs e túneis.
 - [x]  **Virtualização:** Gerencie máquinas virtuais de maneira eficaz, desde a criação até a exclusão.
@@ -137,13 +137,13 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 0.6.0
+## 📌 Versão 0.7.0
 
-### **Adições na Versão 0.6.0**
+### **Adições na Versão 0.7.0**
 
-- **Connections:** Adicionado suporte para conexões físicas e lógicas entre dispositivos de rede.
+- **Wireless:** Gerencie redes sem fio, pontos de acesso e configurações de Wi-Fi.
 
-- **Search:** Adicionado suporte para pesquisas avançadas em todos os objetos pelo metodo get.
+
 
 ## ✒️ Autores
 

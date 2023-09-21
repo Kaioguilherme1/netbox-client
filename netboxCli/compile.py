@@ -48,6 +48,11 @@ api = [
         ['power_connections', 'PowerConnections'],
     ]],
 
+    ['wireless',[
+        ['wireless_lans', 'WirelessLans'],
+        ['wireless_lan_groups', 'WirelessLanGroups']
+    ]],
+
     ['extras',[
         ['config_contexts', 'ConfigContexts'],
         ['config_templates', 'ConfigTemplates'],
