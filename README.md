@@ -33,6 +33,8 @@
 
 Apresentar formas de baixar seu projeto.
 
+[PiP](https://pypi.org/project/netboxcli/)
+
 [Baixar projeto](https://github.com/Kaioguilherme1/netbox-client/archive/refs/heads/main.zip)
 #### Baixar o pacote via terminal.
 ```
