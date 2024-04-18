@@ -10,7 +10,7 @@ class Core:
 
     def get(self, id: int = None, name: str = None, tags: list = None, search: str = None , limit: int = 1000):
 
-        self._netbox._request('get', f'{self._endpoint}?q=200.129.143.16')['results']
+        self._netbox._request('get', f'{self._endpoint}')['results']
 
         if not id and name:
             id = self._netbox._get_id(name,f'{self._endpoint}')
