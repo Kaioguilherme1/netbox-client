@@ -4,7 +4,7 @@ from .devices import Devices
 from .connections import Connections
 from .wireless import Wireless
 from .ipam import Ipam
-from .overlay import Overlay
+from .vpn import Vpn
 from .virtualization import Virtualization
 from .circuits import Circuits
 from .power import Power
@@ -20,7 +20,7 @@ class Client:
         self.connections = Connections(self)
         self.wireless = Wireless(self)
         self.ipam = Ipam(self)
-        self.overlay = Overlay(self)
+        self.overlay = Vpn(self)
         self.virtualization = Virtualization(self)
         self.circuits = Circuits(self)
         self.power = Power(self)
@@ -40,12 +40,15 @@ class Client:
 
     def _request(self, method, endpoint, data=None):
         url = f'{self._base_url}{endpoint}'
-        response = requests.request(method, url, json=data, headers=self._headers)
-
+        try:
+            response = requests.request(method, url, json=data, headers=self._headers)
+        except requests.exceptions.RequestException as e:
+            return ([111, e])
+        
+        
         if response.status_code == 200:
             return response.json()
         else:
-            print(f'Status {response.status_code}: {response.text}')
             return [response.status_code, response.text]
 
     def _get_id(self, name, endpoint):

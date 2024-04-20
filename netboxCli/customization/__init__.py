@@ -1,7 +1,6 @@
 from netboxCli.core import Core
 
 from .custom_fields import CustomFields
-from .custom_field_choices import CustomFieldChoices
 from .custom_links import CustomLinks
 from .export_templates import ExportTemplates
 from .saved_filters import SavedFilters
@@ -15,7 +14,6 @@ class Customization:
     def __init__(self, netbox):
         # Customization
         self.custom_fields = CustomFields(Core(netbox, '/api/extras/custom-fields/'))
-        self.custom_field_choices = CustomFieldChoices(Core(netbox, '/api/extras/custom-field-choices/'))
         self.custom_links = CustomLinks(Core(netbox, '/api/extras/custom-links/'))
         self.export_templates = ExportTemplates(Core(netbox, '/api/extras/export-templates/'))
         self.saved_filters = SavedFilters(Core(netbox, '/api/extras/saved-filters/'))

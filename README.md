@@ -25,7 +25,7 @@
   Lista as dependencias
   * requests
   * python 3.11 ou superior
-  * [netbox](https://github.com/netbox-community/netbox)
+  * [netbox >=3.7.5](https://github.com/netbox-community/netbox)
   
 ## 🔧Instalação
 
@@ -130,7 +130,7 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 - [x]  **Connections:** Interaja com conexões físicas e lógicas entre dispositivos de rede.
 - [x]  **Wireless:** Gerencie redes sem fio, pontos de acesso e configurações de Wi-Fi.
 - [x]  **IPAM:** Simplifique a gestão de blocos de endereços IP, facilitando a adição, recuperação e atualização.
-- [x]  **Overlay:** Suporte para redes de sobreposição, como VPNs e túneis.
+- [x]  **Vpn:** Suporte para redes de sobreposição, como VPNs e túneis.
 - [x]  **Virtualização:** Gerencie máquinas virtuais de maneira eficaz, desde a criação até a exclusão.
 - [x]  **Circuits:** Gerencie circuitos de rede, como conexões de fibra óptica e links externos.
 - [x]  **Power:** Acesse informações relacionadas ao fornecimento de energia e energia de seus dispositivos.
@@ -142,18 +142,13 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.0.0
+## 📌 Versão 1.0.1
 
-### **Adições na Versão 1.0.0**
+### **Adições na Versão 1.0.1**
 
-- **Connections:** Adicionado suporte para conexões físicas e lógicas entre dispositivos de rede.
-- **Overlay:** Adicionado suporte para redes de sobreposição, como VPNs e túneis.
-- **Circuits:** Adicionado suporte para circuitos de rede, como conexões de fibra óptica e links externos.
-- **Power:** Adicionado suporte para informações relacionadas ao fornecimento de energia e energia de seus dispositivos.
-- **Provisioning:** Adicionado suporte para provisionamento de rede, incluindo configurações de DHCP e DNS.
-- **Customization:** Adicionado suporte para modelos e configurações personalizadas para seus dispositivos de rede.
-- **Operations:** Adicionado suporte para informações sobre operações de rede, como manutenção e atualizações.
-
+- **Atualização do Overlay:** atualização do overlay atualmente tendo o nome de vpn com adicição de novos parametros
+- **Correção de Bugs:** correção de bugs e melhorias no código
+- **Criação de sistema de testes:** criação de testes para garantir a qualidade do código por enquanto openrando fazendo a validação dos metodos get()
 
 
 ## ✒️ Autores

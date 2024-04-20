@@ -9,9 +9,9 @@ class Core:
         return self._netbox._request('post',f'{self._endpoint}', data)
 
     def get(self, id: int = None, name: str = None, tags: list = None, search: str = None , limit: int = 1000):
-
-        self._netbox._request('get', f'{self._endpoint}')['results']
-
+        """
+        
+        """
         if not id and name:
             id = self._netbox._get_id(name,f'{self._endpoint}')
 
@@ -23,10 +23,18 @@ class Core:
 
         else:
             if search:
-                response = self._netbox._request('get', f'{self._endpoint}?q={search}&?limit={limit}')['results']
+                response = self._netbox._request('get', f'{self._endpoint}?q={search}&?limit={limit}')
             else:
-                response = self._netbox._request('get', f'{self._endpoint}?limit={limit}')['results']
-
+                response = self._netbox._request('get', f'{self._endpoint}?limit={limit}')
+                
+            if isinstance(response, list) and response[0] != 200:
+                return [response[0], response[1]]
+            
+            if isinstance(response, dict):
+                response = response['results']
+            
+            
+                
             if tags:
                 filtered_resources = []
                 slug_tags = [self._netbox._slug(tag) for tag in tags]

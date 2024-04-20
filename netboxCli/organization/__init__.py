@@ -12,7 +12,7 @@ from .tenant_groups import TenantGroups
 from .contacts import Contacts
 from .contact_groups import ContactGroups
 from .contact_roles import ContactRoles
-from .contact_associations import ContactAssociations
+from .contact_assignment import ContactAssignments
 
 
 class Organization:
@@ -26,7 +26,7 @@ class Organization:
         # racks
         self.racks = Racks(Core(netbox, '/api/dcim/racks/'))
         self.racks_roles = RacksRoles(Core(netbox, '/api/dcim/rack-roles/'))
-        self.reservations = Reservations(Core(netbox, '/api/dcim/reservations/'))
+        self.reservations = Reservations(Core(netbox, '/api/dcim/rack-reservations/'))
         # Tenancy
         self.tenants = Tenants(Core(netbox, '/api/tenancy/tenants/'))
         self.tenant_groups = TenantGroups(Core(netbox, '/api/tenancy/tenant-groups/'))
@@ -34,7 +34,6 @@ class Organization:
         self.contacts = Contacts(Core(netbox, '/api/tenancy/contacts/'))
         self.contact_groups = ContactGroups(Core(netbox, '/api/tenancy/contact-groups/'))
         self.contact_roles = ContactRoles(Core(netbox, '/api/tenancy/contact-roles/'))
-        self.contact_associations = ContactAssociations(Core(netbox, '/api/tenancy/contact-associations/'))
-
+        self.contact_assignments = ContactAssignments(Core(netbox, '/api/tenancy/contact-assignments/'))
 
 __all__ = ['Organization']

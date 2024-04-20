@@ -31,13 +31,13 @@ class Ipam:
         self.rirs = Rirs(Core(netbox, '/api/ipam/rirs/'))
 
         self.vrfs = Vrfs(Core(netbox, '/api/ipam/vrfs/'))
-        self.router_targets = RouterTargets(Core(netbox, '/api/ipam/router-targets/'))
+        self.router_targets = RouterTargets(Core(netbox, '/api/ipam/route-targets/'))
 
         self.vlans = Vlans(Core(netbox, '/api/ipam/vlans/'))
         self.vlan_groups = VlanGroups(Core(netbox, '/api/ipam/vlan-groups/'))
 
         self.fhrp_groups = FhrpGroups(Core(netbox, '/api/ipam/fhrp-groups/'))
-        self.services_templates = ServicesTemplates(Core(netbox, '/api/ipam/services-templates/'))
+        self.services_templates = ServicesTemplates(Core(netbox, '/api/ipam/service-templates/'))
         self.services = Services(Core(netbox, '/api/ipam/services/'))
 
 

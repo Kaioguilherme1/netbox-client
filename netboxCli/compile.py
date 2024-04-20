@@ -3,125 +3,213 @@ import os
 # Lista de dados de teste
 api = [
     ['organization',[
-        ['sites', 'Sites'],
-        ['regions', 'Regions'],
-        ['site_groups', 'SiteGroups'],
-        ['locations', 'Locations'],
-        ['racks', 'Racks'],
-        ['racks_roles', 'RacksRoles'],
-        ['reservations', 'Reservations'],
-        ['tenants', 'Tenants'],
-        ['tenant_groups', 'TenantGroups'],
-        ['contacts', 'Contacts'],
-        ['contact_groups', 'ContactGroups'],
-        ['contact_roles', 'ContactRoles'],
-        ['contact_associations', 'ContactAssociations'],
+        ['sites', 'Sites', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['regions', 'Regions', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['site_groups', 'SiteGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['locations', 'Locations', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['racks', 'Racks', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['racks_roles', 'RacksRoles', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['reservations', 'Reservations', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['tenants', 'Tenants', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['tenant_groups', 'TenantGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['contacts', 'Contacts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['contact_groups', 'ContactGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['contact_roles', 'ContactRoles', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['contact_assignment', 'ContactAssignment', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['devices',[
-        ['devices', 'DevicesClass'],
-        ['modules', 'Modules'],
-        ['devices_roles', 'DevicesRoles'],
-        ['platforms', 'Platforms'],
-        ['virtual_chassis', 'VirtualChassis'],
-        ['virtual_chassis_contexts', 'VirtualChassisContexts'],
-        ['device_types', 'DeviceTypes'],
-        ['modules_types', 'ModulesTypes'],
-        ['manufacturers', 'Manufacturers'],
-        ['interfaces', 'Interfaces'],
-        ['front_ports', 'FrontPorts'],
-        ['rear_ports', 'RearPorts'],
-        ['console_ports', 'ConsolePorts'],
-        ['console_server_ports', 'ConsoleServerPorts'],
-        ['power_ports', 'PowerPorts'],
-        ['power_outlets', 'PowerOutlets'],
-        ['modules_bays', 'ModulesBays'],
-        ['inventory_items', 'InventoryItems'],
-        ['inventory_items_roles', 'InventoryItemsRoles'],
+        ['devices', 'DevicesClass', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['modules', 'Modules', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['devices_roles', 'DevicesRoles', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['platforms', 'Platforms', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['virtual_chassis', 'VirtualChassis', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['virtual_chassis_contexts', 'VirtualChassisContexts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['device_types', 'DeviceTypes', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['modules_types', 'ModulesTypes', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['manufacturers', 'Manufacturers', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['interfaces', 'Interfaces', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['front_ports', 'FrontPorts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['rear_ports', 'RearPorts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['console_ports', 'ConsolePorts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['console_server_ports', 'ConsoleServerPorts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['power_ports', 'PowerPorts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['power_outlets', 'PowerOutlets', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['modules_bays', 'ModulesBays', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['inventory_items', 'InventoryItems', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['inventory_items_roles', 'InventoryItemsRoles', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['connections',[
-        ['cables', 'Cables'],
-        ['wireless_links', 'WirelessLinks'],
-        ['interface_connections', 'InterfaceConnections'],
-        ['console_connections', 'ConsoleConnections'],
-        ['power_connections', 'PowerConnections'],
+        ['cables', 'Cables', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['wireless_links', 'WirelessLinks', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['interface_connections', 'InterfaceConnections', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['wireless',[
-        ['wireless_lans', 'WirelessLans'],
-        ['wireless_lan_groups', 'WirelessLanGroups']
+        ['wireless_lans', 'WirelessLans', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['wireless_lan_groups', 'WirelessLanGroups', ['GET', 'POST', 'PUT', 'DELETE']]
     ]],
 
     ['ipam',[
-        ['ip_addresses', 'IpAddresses'],
-        ['ip_ranges', 'IpRanges'],
-        ['prefixes', 'Prefixes'],
-        ['prefix_roles', 'PrefixRoles'],
-        ['asn_ranges', 'AsnRanges'],
-        ['asns', 'Asns'],
-        ['aggregates', 'Aggregates'],
-        ['rirs', 'Rirs'],
-        ['vrfs', 'Vrfs'],
-        ['router_targets', 'RouterTargets'],
-        ['vlans', 'Vlans'],
-        ['vlan_groups', 'VlanGroups'],
-        ['fhrp_groups', 'FhrpGroups'],
-        ['services_templates', 'ServicesTemplates'],
-        ['services', 'Services']
+        ['ip_addresses', 'IpAddresses', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ip_ranges', 'IpRanges', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['prefixes', 'Prefixes', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['prefix_roles', 'PrefixRoles', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['asn_ranges', 'AsnRanges', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['asns', 'Asns', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['aggregates', 'Aggregates', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['rirs', 'Rirs', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['vrfs', 'Vrfs', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['router_targets', 'RouterTargets', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['vlans', 'Vlans', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['vlan_groups', 'VlanGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['fhrp_groups', 'FhrpGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['services_templates', 'ServicesTemplates', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['services', 'Services', ['GET', 'POST', 'PUT', 'DELETE']]
     ]],
 
-    ['overlay',[
-        ['l2vpns', 'L2vpns'],
-        ['terminations', 'Terminations'],
+    ['vpn',[
+        ['tunnels', 'Tunnels', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['tunnel_terminations', 'TunnelTerminations', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['tunnel_grups', 'TunnelGrups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['l2vpns', 'L2vpns', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['terminations', 'Terminations', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ike_policies', 'IkePolicies', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ike_proposals', 'IkeProposals', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ipsec_policies', 'IpsecPolicies', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ipsec_profiles', 'IpsecProfiles', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['ipsec_proposals', 'IpsecProposals', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['virtualization',[
-        ['cluster_groups', 'ClusterGroups'],
-        ['cluster_types', 'ClusterTypes'],
-        ['clusters', 'Clusters'],
-        ['virtual_machines', 'VirtualMachines'],
-        ['interfaces', 'Interfaces']
+        ['cluster_groups', 'ClusterGroups', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['cluster_types', 'ClusterTypes', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['clusters', 'Clusters', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['virtual_machines', 'VirtualMachines', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['interfaces', 'Interfaces', ['GET', 'POST', 'PUT', 'DELETE']]
     ]],
 
     ['Circuits',[
-        ['circuits', 'CircuitsClass'],
-        ['circuit_types', 'CircuitTypes'],
-        ['providers', 'Providers'],
-        ['provider_accounts', 'ProviderAccounts'],
-        ['provider_networks', 'ProviderNetworks'],
+        ['circuits', 'CircuitsClass', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['circuit_types', 'CircuitTypes', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['providers', 'Providers', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['provider_accounts', 'ProviderAccounts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['provider_networks', 'ProviderNetworks', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['power',[
-        ['power_feeds', 'PowerFeeds'],
-        ['power_panels', 'PowerPanels'],
+        ['power_feeds', 'PowerFeeds', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['power_panels', 'PowerPanels', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['Provisioning',[
-        ['config_contexts', 'ConfigContexts'],
-        ['config_templates', 'ConfigTemplates'],
+        ['config_contexts', 'ConfigContexts', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['config_templates', 'ConfigTemplates', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['Customization', [
-        ['custom_fields', 'CustomFields'],
-        ['custom_field_choices', 'CustomFieldChoices'],
-        ['custom_links', 'CustomLinks'],
-        ['export_templates', 'ExportTemplates'],
-        ['saved_filters', 'SavedFilters'],
-        ['tags', 'Tags'],
-        ['image_attachments', 'ImageAttachments'],
-        ['reports', 'Reports'],
-        ['scripts', 'Scripts'],
+        ['custom_fields', 'CustomFields', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['custom_links', 'CustomLinks', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['export_templates', 'ExportTemplates', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['saved_filters', 'SavedFilters', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['tags', 'Tags', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['image_attachments', 'ImageAttachments', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['reports', 'Reports', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['scripts', 'Scripts', ['GET', 'POST', 'PUT', 'DELETE']],
     ]],
 
     ['Operations', [
-        ['data_sources', 'DataSources'],
-        ['webhooks', 'Webhooks'],
-        ['jobs', 'Jobs'],
-        ['journal_entries', 'JournalEntries'],
-        ['change_log', 'ChangeLog'],
+        ['data_sources', 'DataSources', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['webhooks', 'Webhooks', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['jobs', 'Jobs', ['GET', 'POST', 'PUT', 'DELETE']],
+        ['journal_entries', 'JournalEntries', ['GET', 'POST', 'PUT', 'DELETE']],
+       
     ]]
 ]
+
+
+class_header = '''
+class {class_name}:
+    """
+    this class is used to create, retrieve, update, and delete resources of netbox api.
+
+    Args:
+        core (obj): Core object for create, retrieve, update, and delete actions.
+
+    Attributes:
+        core (obj): Core object for create, retrieve, update, and delete actions.
+    """
+    
+    def __init__(self, core):
+        self._core = core
+'''
+
+metods = {
+    'POST' : '''
+    def create(self, data):
+        """
+        Create a new resource using the provided data.
+    
+        Args:
+            data (dict): Data to create the resource. It should contain all the necessary information to create the resource.
+    
+        Returns:
+            dict: Data of the created resource if successful.
+                  If the creation fails or if the data is invalid, returns None.
+        """
+        return self._core.create(data)
+    '''
+    ,
+    'GET' : '''
+    def get(self, id: int = None, name: str = None, tags: list = None, search: str = None, limit: int = 1000):
+        """
+       Retrieve a resource from the NetBox API based on ID, name, tags, or search query.
+    
+       Args:
+           id (int, optional): The ID of the resource to retrieve.
+           name (str, optional): The name of the resource to retrieve.
+           tags (list, optional): List of tags to filter resources.
+           search (str, optional): Search query to filter resources.
+           limit (int, optional): Maximum number of results to return. Defaults to 1000.
+    
+       Returns:
+           dict or list: If a single resource is found, returns a dictionary containing the data of the retrieved resource.
+                        If multiple resources are found, returns a list of dictionaries containing the data of the retrieved resources.
+                        If no resources are found, returns an empty list.
+       """
+        return self._core.get(id, name, tags, search, limit)
+    '''
+    ,
+    'PUT' : '''
+    def update(self, data):
+        """
+        Update an existing resource with the provided data.
+    
+        Args:
+            data (dict): Updated data for the resource. It should contain all the necessary information to update the resource.
+    
+        Returns:
+            dict: Data of the resource after the update if successful.
+                  If the update fails or if the data is invalid, returns None.
+        """
+        return self._core.update(data)
+    '''
+    ,
+    'DELETE' : '''
+    def delete(self, id: int):
+        """
+        Delete a resource based on its ID.
+    
+        Args:
+            id (int): ID of the resource to delete.
+    
+        Returns:
+            bool: True if deletion is successful, False otherwise.
+        """
+        return self._core.delete(id)
+    '''
+}
 
 # Conteúdo da classe base
 class_content = '''
@@ -178,26 +266,71 @@ class {class_name}:
         self._core = core
 
     def create(self, data):
-        """Create a new resource using the provided data."""
+        """
+        Create a new resource using the provided data.
+    
+        Args:
+            data (dict): Data to create the resource. It should contain all the necessary information to create the resource.
+    
+        Returns:
+            dict: Data of the created resource if successful.
+                  If the creation fails or if the data is invalid, returns None.
+        """
         return self._core.create(data)
 
     def get(self, id: int = None, name: str = None, tags: list = None, search: str = None, limit: int = 1000):
-        """Retrieve a resource based on ID or name."""
+        """
+       Retrieve a resource from the NetBox API based on ID, name, tags, or search query.
+    
+       Args:
+           id (int, optional): The ID of the resource to retrieve.
+           name (str, optional): The name of the resource to retrieve.
+           tags (list, optional): List of tags to filter resources.
+           search (str, optional): Search query to filter resources.
+           limit (int, optional): Maximum number of results to return. Defaults to 1000.
+    
+       Returns:
+           dict or list: If a single resource is found, returns a dictionary containing the data of the retrieved resource.
+                        If multiple resources are found, returns a list of dictionaries containing the data of the retrieved resources.
+                        If no resources are found, returns an empty list.
+       """
         return self._core.get(id, name, tags, search, limit)
 
     def update(self, data):
-        """Update an existing resource."""
+        """
+        Update an existing resource with the provided data.
+    
+        Args:
+            data (dict): Updated data for the resource. It should contain all the necessary information to update the resource.
+    
+        Returns:
+            dict: Data of the resource after the update if successful.
+                  If the update fails or if the data is invalid, returns None.
+        """
         return self._core.update(data)
 
     def delete(self, id: int):
-        """Delete a resource based on its ID."""
+        """
+        Delete a resource based on its ID.
+    
+        Args:
+            id (int): ID of the resource to delete.
+    
+        Returns:
+            bool: True if deletion is successful, False otherwise.
+        """
         return self._core.delete(id)
 '''
+
 
 for folder in api:
     folder_name = folder[0]
     class_list = folder[1]
-
+    metdos_list = folder[1][0][2]
+    class_content = class_header
+    for metod in metdos_list:
+        class_content += metods[metod]
+    
     if not os.path.exists(folder_name):
         os.makedirs(folder_name)
 
@@ -212,5 +345,6 @@ for folder in api:
 
         with open(file_name, 'w') as file:
             file.write(class_content.format(class_name=class_name))
+
 
 print("Process completed.")

@@ -28,7 +28,7 @@ class Devices:
         self.devices_roles = DevicesRoles(Core(netbox, '/api/dcim/device-roles/'))
         self.platforms = Platforms(Core(netbox, '/api/dcim/platforms/'))
         self.virtual_chassis = VirtualChassis(Core(netbox, '/api/dcim/virtual-chassis/'))
-        self.virtual_chassis_contexts = VirtualChassisContexts(Core(netbox, '/api/dcim/virtual-chassis-contexts/'))
+        self.virtual_chassis_contexts = VirtualChassisContexts(Core(netbox, '/api/dcim/virtual-device-contexts/'))
         #Devices types
         self.device_types = DeviceTypes(Core(netbox, '/api/dcim/device-types/'))
         self.modules_types = ModulesTypes(Core(netbox, '/api/dcim/module-types/'))
@@ -43,7 +43,7 @@ class Devices:
         self.power_outlets = PowerOutlets(Core(netbox, '/api/dcim/power-outlets/'))
         self.modules_bays = ModulesBays(Core(netbox, '/api/dcim/device-bays/'))
         self.inventory_items = InventoryItems(Core(netbox, '/api/dcim/inventory-items/'))
-        self.inventory_items_roles = InventoryItemsRoles(Core(netbox, '/api/dcim/inventory-items-roles/'))
+        self.inventory_items_roles = InventoryItemsRoles(Core(netbox, '/api/dcim/inventory-item-roles/'))
 
 __all__ = ['Devices']
 
