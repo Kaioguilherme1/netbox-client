@@ -1,24 +1,46 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project]
+[tool.poetry]
 name = "netboxcli"
-version = "1.0.1"
-authors = [
-  { name="kaio Guilherme", email="kaioguilherme444@outlook.com" },
-]
-description = "A Python package to interact with the NetBox API."
-
+version = "0.1.0"
+description = ""
+authors = ["kaio Guilherme  <kaioguilherme444@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.6"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
 
-[project.urls]
-"Homepage" = "https://github.com/Kaioguilherme1/netbox-client"
-"Bug Tracker" = "https://github.com/Kaioguilherme1/netbox-client/issues"
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.31.0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^5.0.0"
+blue = "^0.9.1"
+isort = "^5.13.2"
+taskipy = "^1.12.2"
+setuptools = "^69.5.1"
+
+
+[tool.poetry.group.doc.dependencies]
+mkdocs-material = "^9.5.18"
+mkdocstrings = "^0.24.3"
+mkdocstrings-python = "^1.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = "."
+addopts = "--doctest-modules"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.taskipy.tasks]
+lint = "blue --check --diff . && isort --check --diff ."
+lint-fix = "blue . && isort ."
+docs = "mkdocs serve -a 0.0.0.0:8080"
+pre_test = "task lint"
+test = "pytest -s -x --cov=netboxcli -vv"
+post_test = "coverage html"
+test_get = "pytest -s -x --cov=test -vv tests/test.py"

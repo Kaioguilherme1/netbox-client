@@ -1,0 +1,1 @@
+::: customization.image_attachments

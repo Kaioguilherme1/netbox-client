@@ -1,4 +1,3 @@
-
 class Core:
     def __init__(self, netbox: object, endpoint: str):
         self._netbox = netbox
@@ -6,35 +5,43 @@ class Core:
 
     def create(self, data):
         data['slug'] = self._netbox._slug(data['name'])
-        return self._netbox._request('post',f'{self._endpoint}', data)
+        return self._netbox._request('post', f'{self._endpoint}', data)
 
-    def get(self, id: int = None, name: str = None, tags: list = None, search: str = None , limit: int = 1000):
-        """
-        
-        """
+    def get(
+        self,
+        id: int = None,
+        name: str = None,
+        tags: list = None,
+        search: str = None,
+        limit: int = 1000,
+    ):
+        """ """
         if not id and name:
-            id = self._netbox._get_id(name,f'{self._endpoint}')
+            id = self._netbox._get_id(name, f'{self._endpoint}')
 
             if id is not None:
-                return self._netbox._request('get', f'{self._endpoint}?id={id}')['results'][0]
+                return self._netbox._request(
+                    'get', f'{self._endpoint}?id={id}'
+                )['results'][0]
             else:
                 return None
 
-
         else:
             if search:
-                response = self._netbox._request('get', f'{self._endpoint}?q={search}&?limit={limit}')
+                response = self._netbox._request(
+                    'get', f'{self._endpoint}?q={search}&?limit={limit}'
+                )
             else:
-                response = self._netbox._request('get', f'{self._endpoint}?limit={limit}')
-                
+                response = self._netbox._request(
+                    'get', f'{self._endpoint}?limit={limit}'
+                )
+
             if isinstance(response, list) and response[0] != 200:
                 return [response[0], response[1]]
-            
+
             if isinstance(response, dict):
                 response = response['results']
-            
-            
-                
+
             if tags:
                 filtered_resources = []
                 slug_tags = [self._netbox._slug(tag) for tag in tags]
@@ -49,11 +56,11 @@ class Core:
                 return response
 
     def update(self, data):
-        return self._netbox._request('put',f'{self._endpoint}', data)
+        return self._netbox._request('put', f'{self._endpoint}', data)
 
     def delete(self, id: int):
         response = self._netbox._request('delete', f'{self._endpoint}{id}/')
         if response[0] != 204:
             return [False, response[0], response[1]]
         else:
-            return [True,response[0],response[1]]
+            return [True, response[0], response[1]]

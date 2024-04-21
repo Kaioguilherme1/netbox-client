@@ -1,9 +1,8 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 # Description of your package
-DESCRIPTION = (
-    '''A Python package to interact with the NetBox API.
-        Version 1.0.1
+DESCRIPTION = """A Python package to interact with the NetBox API.
+        Version 1.0.2
        - Resources:
        * organizations
        * devices
@@ -17,11 +16,11 @@ DESCRIPTION = (
        * provisioning
        * customization
        * operations      
-               ''')
+               """
 
 setup(
-    name='netboxCli',
-    version='1.0.1',
+    name='netboxcli',
+    version='1.0.2',
     description=DESCRIPTION,
     packages=find_packages(),
     install_requires=[

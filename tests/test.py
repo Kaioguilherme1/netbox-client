@@ -1,8 +1,9 @@
-import time
 import logging
-import netboxCli as nb
+import time
 
-client = nb.Client('http://localhost:8000', 'token')
+import netboxcli as nb
+
+client = nb.Client('http://localhost:8000', 'to ken')
 
 log_debug = logging.getLogger('debug')
 log_debug.setLevel(logging.DEBUG)
@@ -19,31 +20,33 @@ def get_modules(obj):
         if not module.startswith('__') and not module.startswith('_'):
             attr = getattr(obj, module)
             for sub_module in dir(attr):
-                if not sub_module.startswith('__') and not sub_module.startswith('_'):
-                    modules.append(f"{module}.{sub_module}")
+                if not sub_module.startswith(
+                    '__'
+                ) and not sub_module.startswith('_'):
+                    modules.append(f'{module}.{sub_module}')
 
     return modules
 
 
 def validation(module, result):
     if isinstance(result, list) and result and result[0] == 404:
-        print(f"Module: {module} - failed - Page not found")
-        log_error.error(f"Module: {module} pege not found- {result}")
+        print(f'Module: {module} - failed - Page not found')
+        log_error.error(f'Module: {module} pege not found- {result}')
         return False
 
     elif isinstance(result, list):
-        print(f"Module: {module} - passed")
-        log_debug.info(f"Module: {module} - Result: {result}")
-        return True
+        print(f'Module: {module} - passed')
+        log_debug.info(f'Module: {module} - Result: {result}')
+        return [True, result]
     elif isinstance(result, dict):
-        print(f"Module: {module} - passed")
-        log_debug.info(f"Module: {module} - Result: {result}")
+        print(f'Module: {module} - passed')
+        log_debug.info(f'Module: {module} - Result: {result}')
 
-        return True
+        return [True, result]
 
     else:
-        print(f"Module: {module} - failed")
-        log_error.error(f"Module: {module} - Error: {result}")
+        print(f'Module: {module} - failed')
+        log_error.error(f'Module: {module} - Error: {result}')
         return False
 
 
@@ -55,7 +58,7 @@ def test_get(obj, modules):
             module_obj1 = getattr(obj, module_list[0])
             module_obj2 = getattr(module_obj1, module_list[1])
         except Exception as e:
-            log_error.error(f"Error: {e}")
+            log_error.error(f'Error: {e}')
             continue
 
         try:
@@ -63,20 +66,19 @@ def test_get(obj, modules):
                 result = module_obj2.get()
                 time.sleep(1)
             except Exception as e:
-                print(f"Module: {module} - request failed")
-                log_error.error(f"{e}")
+                print(f'Module: {module} - request failed')
+                log_error.error(f'{e}')
                 continue
-
             if isinstance(result, list) and result and result[0] == 111:
-                print("Conenction Error")
-                log_error.error(f"{result}")
+                print('Conenction Error')
+                log_error.error(f'{result}')
                 break
 
-            validation(module, result)
+            assert validation(module, result)
 
         except Exception as e:
-            print(f"Module: {module} - failed")
-            log_error.error(f"Module: {module} execution - Error: {e}")
+            print(f'Module: {module} - failed')
+            log_error.error(f'Module: {module} execution - Error: {e}')
 
 
 modules = get_modules(client)

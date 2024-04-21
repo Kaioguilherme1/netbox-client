@@ -1,0 +1,1 @@
+::: virtualization.cluster_types

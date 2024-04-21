@@ -32,7 +32,10 @@ venv/
 # PyCharm IDE specific files
 .idea/
 
-# Main Python script
-main.py
-compile.py
-update.sh
+# all logs
+*.log
+
+#coverage
+.coverage
+tests/.coverage
+tests/htmlcov/

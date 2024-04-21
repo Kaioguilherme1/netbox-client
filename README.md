@@ -142,14 +142,14 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.0.1
+## 📌 Versão 1.0.2
 
-### **Adições na Versão 1.0.1**
+### **Adições na Versão 1.0.2**
 
-- **Atualização do Overlay:** atualização do overlay atualmente tendo o nome de vpn com adicição de novos parametros
-- **Correção de Bugs:** correção de bugs e melhorias no código
-- **Criação de sistema de testes:** criação de testes para garantir a qualidade do código por enquanto openrando fazendo a validação dos metodos get()
-
+- **Atualização do Documetação com mkdocs:** Atualização da documentação do projeto com o Mkdocs.
+- **Refatoração e analise de formtação do código:** Refatoração e analise de formatação de código, usando lints como blue e isort.
+- **Implementação de testes unitários:** Implementação de testes unitários para garantir a qualidade do código.
+- **Otimização do script de compilação de metodos:** Otimização do script de compilação de metodos para facilitar a manutenção do projeto.
 
 ## ✒️ Autores
 

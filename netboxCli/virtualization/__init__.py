@@ -1,11 +1,10 @@
-from netboxCli.core import Core
+from netboxcli.core import Core
 
-from .virtual_machines import VirtualMachines
-from .interfaces import Interfaces
-from .clusters import Clusters
-from .cluster_types import ClusterTypes
 from .cluster_groups import ClusterGroups
-
+from .cluster_types import ClusterTypes
+from .clusters import Clusters
+from .interfaces import Interfaces
+from .virtual_machines import VirtualMachines
 
 
 class Virtualization:
@@ -22,6 +21,7 @@ class Virtualization:
         cluster_types (ClusterTypes): Instance of the ClusterTypes class for managing cluster types.
         cluster_groups (ClusterGroups): Instance of the ClusterGroups class for managing cluster groups.
     """
+
     def __init__(self, netbox):
         """
         Initialize Virtualization class with Netbox API instance.
@@ -29,11 +29,19 @@ class Virtualization:
         Args:
             netbox (obj): Netbox API instance.
         """
-        self.virtual_machines = VirtualMachines(Core(netbox, '/api/virtualization/virtual-machines/'))
-        self.interfaces = Interfaces(Core(netbox, '/api/virtualization/interfaces/'))
+        self.virtual_machines = VirtualMachines(
+            Core(netbox, '/api/virtualization/virtual-machines/')
+        )
+        self.interfaces = Interfaces(
+            Core(netbox, '/api/virtualization/interfaces/')
+        )
         self.clusters = Clusters(Core(netbox, '/api/virtualization/clusters/'))
-        self.cluster_types = ClusterTypes(Core(netbox, '/api/virtualization/cluster-types/'))
-        self.cluster_groups = ClusterGroups(Core(netbox, '/api/virtualization/cluster-groups/'))
+        self.cluster_types = ClusterTypes(
+            Core(netbox, '/api/virtualization/cluster-types/')
+        )
+        self.cluster_groups = ClusterGroups(
+            Core(netbox, '/api/virtualization/cluster-groups/')
+        )
 
 
 __all__ = ['Virtualization']
