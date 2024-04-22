@@ -1,4 +1,4 @@
-from . import core, virtualization
+from . import core
 from .client import Client
 
 __all__ = ['Client', 'core']

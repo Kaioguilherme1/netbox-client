@@ -3,22 +3,59 @@ repo_url: https://github.com/Kaioguilherme1/netbox-client
 repo_name: Kaioguilherme1/netbox-client
 edit_uri: tree/main/docs/
 
-
 theme: 
   name: material
-  language: pt-BR
+  language: en
+  features:
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - content.action.edit
+    - toc.follow
+    - content.tooltips
+    - navigation.indexes
+    - navigation.path
+    - navigation.footer
   palette:
-    primary: deep_blue
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to system preference
 
 markdown_extensions: 
   - attr_list
-
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins: 
+- search
 - mkdocstrings:
     default_handler: python
     handlers:
       python: 
         paths: [netboxcli]
-        
-      
+        options:
+          show_symbol_type_heading: true
+          show_symbol_type_toc: true
+          show_source: false
+          show_inheritance_diagram: true
+
+extra: 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Kaioguilherme1

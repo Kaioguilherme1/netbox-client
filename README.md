@@ -146,11 +146,8 @@ Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o Ne
 
 ### **Adições na Versão 1.0.3**
 
-- **Atualização do Documetação com mkdocs:** Atualização da documentação do projeto com o Mkdocs.
-- **Detalhamaento das Classes com Docstrings:** Detalhamento das classes e métodos com docstrings para facilitar a compreensão do código.
-- **Otimização e correção de bugs:** Otimização e correção de bugs nas Classe Client e Core.
-- **Otimização do script de compilação de metodos:** Otimização do script de compilação de metodos para facilitar a manutenção do projeto.
-
+- **Atualização do Documetação:** Atualização da documentação usando docstrings.
+- **Adicionando CI no repositorio com github Actions:** Adicionando CI no repositorio com github Actions.
 ## ✒️ Autores
 
 * **developer** - *Initial Work* - [Kaio Guilherme](https://github.com/Kaioguilherme1)

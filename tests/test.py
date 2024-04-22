@@ -85,4 +85,3 @@ def test_get(obj, modules):
 
 modules = get_modules(client)
 # test_get(client, modules)
-client.devices.devices.get(name='JPA')

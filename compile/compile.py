@@ -60,6 +60,9 @@ def docs():
         if not os.path.exists(f'{root_path}/{folder_name}'):
             os.makedirs(f'{root_path}/{folder_name}')
 
+        with open(f'{root_path}/{folder_name}/index.md', 'w') as file:
+            file.write(f'#{folder_name.lower()}\n::: {folder_name.lower()}')
+
         for resource in class_list:
             name = resource['name']
             file_name = f'{root_path}/{folder_name}/{name}.md'
@@ -72,3 +75,17 @@ def docs():
 
             with open(file_name, 'w') as file:
                 file.write(content)
+
+
+def __main__():
+    import sys
+
+    if len(sys.argv) > 1:
+        if sys.argv[1] == 'docs':
+            docs()
+        elif sys.argv[1] == 'code':
+            code()
+        else:
+            print('Invalid argument.')
+    else:
+        print('No argument provided.')

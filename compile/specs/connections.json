@@ -22,17 +22,6 @@
                 "PUT",
                 "DELETE"
             ]
-        },
-        {
-            "name": "interface_connections",
-            "class": "InterfaceConnections",
-            "docs": "Respsonsible for managing interface connections",
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE"
-            ]
         }
     ]
 }

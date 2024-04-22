@@ -52,9 +52,29 @@ class Client:
         }
 
     def _slug(self, text) -> str:
+        """
+        Convert a text to a slug format.
+
+        Args:
+            text (str): The text to be converted to a slug format.
+
+        Returns:
+            str: The text in a slug format.
+        """
         return text.lower().replace(' ', '-')
 
     def _request(self, method, endpoint, data=None) -> dict:
+        """
+        Make a request to the Netbox API.
+
+        Args:
+            method (str): The HTTP method to be used in the request.
+            endpoint (str): The endpoint to interact with in Netbox.
+            data (dict): The data to be sent in the request.
+
+        Returns:
+            dict: Returns a dictionary with the status code and the request data in JSON format: {status: 200, data: {respondse}}
+        """
         url = f'{self._base_url}{endpoint}'
         result = {
             'status': None,
@@ -79,6 +99,16 @@ class Client:
         return result
 
     def _get_id(self, name: str, endpoint: str) -> int:
+        """
+        Get the ID of an object in Netbox by its name.
+
+        Args:
+            name (str): The name of the object to get the ID.
+            endpoint (str): The endpoint to interact with in Netbox.
+
+        Returns:
+            int: The ID of the object in Netbox.
+        """
         if name:
             result = self._request('GET', endpoint)
             status = result['status']
