@@ -16,16 +16,27 @@ from .wireless import Wireless
 
 class Client:
     """
-    Netbox API client
+    Netbox API client to interact with the Netbox API.
     """
 
-    def __init__(self, API_IP, API_TOKEN):
+    def __init__(self, API_IP: str, API_TOKEN: str):
+        """
+        Initialize the Netbox API client for connecting to the Netbox API.
+
+        Args:
+            API_IP (str): The IP address of the Netbox API.
+            API_TOKEN (str): The token to authenticate with the Netbox API.
+
+        Examples:
+            >>> from netboxcli import Client
+            >>> client = Client('http://localhost:8000','9437417491269694621969126946')
+        """
         self.organization = Organization(self)
         self.devices = Devices(self)
         self.connections = Connections(self)
         self.wireless = Wireless(self)
         self.ipam = Ipam(self)
-        self.overlay = Vpn(self)
+        self.vpn = Vpn(self)
         self.virtualization = Virtualization(self)
         self.circuits = Circuits(self)
         self.power = Power(self)
@@ -40,29 +51,46 @@ class Client:
             'Content-Type': 'application/json',
         }
 
-    def _slug(self, text):
+    def _slug(self, text) -> str:
         return text.lower().replace(' ', '-')
 
-    def _request(self, method, endpoint, data=None):
+    def _request(self, method, endpoint, data=None) -> dict:
         url = f'{self._base_url}{endpoint}'
+        result = {
+            'status': None,
+            'data': None,
+        }
         try:
             response = requests.request(
                 method, url, json=data, headers=self._headers
             )
         except requests.exceptions.RequestException as e:
-            return [111, e]
+            result['status'] = 111
+            result['data'] = e
+            return result
 
+        result['status'] = response.status_code
         if response.status_code == 200:
-            return response.json()
+
+            result['data'] = response.json()
         else:
-            return [response.status_code, response.text]
+            result['data'] = response.text
 
-    def _get_id(self, name, endpoint):
+        return result
+
+    def _get_id(self, name: str, endpoint: str) -> int:
         if name:
-            data = self._request('GET', endpoint)['results']
-            filtered_data = filter(lambda d: d['name'] == str(name), data)
-            ids = list(map(lambda d: d['id'], filtered_data))
+            result = self._request('GET', endpoint)
+            status = result['status']
+            data = result['data']
 
+            if status != 200:
+                # Trate o erro de forma adequada
+                return None
+
+            results = data.get('results', [])
+            filtered_data = filter(lambda d: d['name'] == name, results)
+            ids = [d['id'] for d in filtered_data]
             if ids:
                 return ids[0]
 

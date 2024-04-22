@@ -1,7 +1,7 @@
 import json
 import os
 
-from api_structure import api, class_header, metods
+from api_structure import class_header, metods
 
 
 def read_specs() -> list:
@@ -15,48 +15,56 @@ def read_specs() -> list:
 
 def code():
     root_path = '../netboxcli'
-
-    for folder in api:
-        folder_name = folder[0]
-        class_list = folder[1]
-        metdos_list = folder[1][0][2]
+    class_list = read_specs()
+    for folder in class_list:
+        folder_name = folder['Class_name']
+        class_list = folder['sub_classes']
         class_content = class_header
-        for metod in metdos_list:
-            class_content += metods[metod]
-
         if not os.path.exists(f'{root_path}/{folder_name}'):
             os.makedirs(f'{root_path}/{folder_name}')
 
         for resource in class_list:
-            file_name = f'{root_path}/{folder_name}/{resource[0]}.py'
-            class_name = resource[1]
+            metdos_list = resource['methods']
+            for metod in metdos_list:
+                class_content += metods[metod].rstrip()
+            class_content += '\n'
+            file_name = f"{root_path}/{folder_name}/{resource['name']}.py"
 
+            folder_name = folder_name.lower()
+            class_name = resource['class']
             if os.path.exists(file_name):
                 print(f"Updating file '{file_name}'.")
             else:
                 print(f"Creating file '{file_name}'.")
-
             with open(file_name, 'w') as file:
-                file.write(class_content.format(class_name=class_name))
+                file.write(
+                    class_content.format(
+                        class_name=class_name,
+                        docstring=resource['docs'],
+                        subclass=resource['name'],
+                        class_main=folder_name,
+                        result='Returns a list with a status code and the request data in JSON format: {{status: 200, data: '
+                        '{{result: [list of {0}]}}}}'.format(resource['name']),
+                    )
+                )
+            class_content = class_header
 
 
 def docs():
     root_path = '../docs/api'
-    specs = read_specs()
+    api = read_specs()
     for folder in api:
-        folder_name = folder[0]
-        class_list = folder[1]
+        folder_name = folder['Class_name']
+        class_list = folder['sub_classes']
 
         if not os.path.exists(f'{root_path}/{folder_name}'):
             os.makedirs(f'{root_path}/{folder_name}')
 
         for resource in class_list:
-            file_name = f'{root_path}/{folder_name}/{resource[0]}.md'
-            class_name = resource[0]
-            # deixa a primeira letra em minusculo
+            name = resource['name']
+            file_name = f'{root_path}/{folder_name}/{name}.md'
             folder_name = folder_name.lower()
-            content = f'::: {folder_name}.{class_name}'
-            print(content)
+            content = f'::: {folder_name}.{name}'
             if os.path.exists(file_name):
                 print(f"Updating file '{file_name}'.")
             else:
@@ -64,8 +72,3 @@ def docs():
 
             with open(file_name, 'w') as file:
                 file.write(content)
-
-
-code()
-docs()
-print('Process completed.')

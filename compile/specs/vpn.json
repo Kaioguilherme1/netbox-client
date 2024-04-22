@@ -1,0 +1,115 @@
+{
+    "Class_name": "vpn",
+    "sub_classes": [
+        {
+            "name": "tunnels",
+            "class": "Tunnels",
+            "docs": "Responsable for managing the tunnels in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "tunnel_terminations",
+            "class": "TunnelTerminations",
+            "docs": "Responsable for managing the tunnel terminations in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "tunnel_groups",
+            "class": "TunnelGroups",
+            "docs": "Responsable for managing the tunnel groups in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "l2vpns",
+            "class": "L2vpns",
+            "docs": "Responsable for managing the L2VPNs in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "terminations",
+            "class": "Terminations",
+            "docs": "Responsable for managing the terminations in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ike_policies",
+            "class": "IkePolicies",
+            "docs": "Responsable for managing the IKE policies in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ike_proposals",
+            "class": "IkeProposals",
+            "docs": "Responsable for managing the IKE proposals in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ipsec_policies",
+            "class": "IpsecPolicies",
+            "docs": "Responsable for managing the IPSEC policies in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ipsec_profiles",
+            "class": "IpsecProfiles",
+            "docs": "Responsable for managing the IPSEC profiles in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ipsec_proposals",
+            "class": "IpsecProposals",
+            "docs": "Responsable for managing the IPSEC proposals in the VPN",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

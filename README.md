@@ -142,13 +142,13 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.0.2
+## 📌 Versão 1.0.3
 
-### **Adições na Versão 1.0.2**
+### **Adições na Versão 1.0.3**
 
 - **Atualização do Documetação com mkdocs:** Atualização da documentação do projeto com o Mkdocs.
-- **Refatoração e analise de formtação do código:** Refatoração e analise de formatação de código, usando lints como blue e isort.
-- **Implementação de testes unitários:** Implementação de testes unitários para garantir a qualidade do código.
+- **Detalhamaento das Classes com Docstrings:** Detalhamento das classes e métodos com docstrings para facilitar a compreensão do código.
+- **Otimização e correção de bugs:** Otimização e correção de bugs nas Classe Client e Core.
 - **Otimização do script de compilação de metodos:** Otimização do script de compilação de metodos para facilitar a manutenção do projeto.
 
 ## ✒️ Autores

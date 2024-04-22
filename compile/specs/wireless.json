@@ -1,0 +1,27 @@
+{
+    "Class_name": "wireless",
+    "sub_classes": [
+        {
+            "name": "wireless_lans",
+            "class": "WirelessLans",
+            "docs": "Responsable for managing wireless lans",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "wireless_lan_groups",
+            "class": "WirelessLanGroups",
+            "docs": "Responsable for managing wireless lan groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "Class_name": "power",
+    "sub_classes": [
+        {
+            "name": "power_feeds",
+            "class": "PowerFeeds",
+            "docs": "This class is used to manage power feeds",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "power_panels",
+            "class": "PowerPanels",
+            "docs": "This class is used to manage power panels",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

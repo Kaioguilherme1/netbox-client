@@ -1,0 +1,148 @@
+{
+    "Class_name": "organization",
+    "sub_classes": [
+        {
+            "name": "sites",
+            "class": "Sites",
+            "docs": "Responsable for managing sites in the organization",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "regions",
+            "class": "Regions",
+            "docs": "Responsable for managing regions",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "site_groups",
+            "class": "SiteGroups",
+            "docs": "Responsable for managing site groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "locations",
+            "class": "Locations",
+            "docs": "Responsable for managing locations",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "racks",
+            "class": "Racks",
+            "docs": "Responsable for managing racks",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "racks_roles",
+            "class": "RacksRoles",
+            "docs": "Responsable for managing racks roles",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "reservations",
+            "class": "Reservations",
+            "docs": "Responsable for managing reservations",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "tenants",
+            "class": "Tenants",
+            "docs": "Responsable for managing tenants",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "tenant_groups",
+            "class": "TenantGroups",
+            "docs": "Responsable for managing tenant groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "contacts",
+            "class": "Contacts",
+            "docs": "Responsable for managing contacts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "contact_groups",
+            "class": "ContactGroups",
+            "docs": "Responsable for managing contact groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "contact_roles",
+            "class": "ContactRoles",
+            "docs": "Responsable for managing contact roles",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "contact_assignments",
+            "class": "ContactAssignments",
+            "docs": "Responsable for managing contact assignments",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

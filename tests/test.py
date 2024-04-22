@@ -1,9 +1,11 @@
 import logging
+import sys
 import time
 
-import netboxcli as nb
+sys.path.append('..')
+from netboxcli import Client
 
-client = nb.Client('http://localhost:8000', 'to ken')
+client = Client('http://localhost:8000', 'token')
 
 log_debug = logging.getLogger('debug')
 log_debug.setLevel(logging.DEBUG)
@@ -82,4 +84,5 @@ def test_get(obj, modules):
 
 
 modules = get_modules(client)
-test_get(client, modules)
+# test_get(client, modules)
+client.devices.devices.get(name='JPA')

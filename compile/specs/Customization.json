@@ -1,0 +1,93 @@
+{
+    "Class_name": "Customization",
+    "sub_classes": [
+        {
+            "name": "custom_fields",
+            "class": "CustomFields",
+            "docs": "Responsable for managing custom fields",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "custom_links",
+            "class": "CustomLinks",
+            "docs": "Responsable for managing custom links",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "export_templates",
+            "class": "ExportTemplates",
+            "docs": "Responsable for managing export templates",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "saved_filters",
+            "class": "SavedFilters",
+            "docs": "Responsable for managing saved filters",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "tags",
+            "class": "Tags",
+            "docs": "Responsable for managing tags",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "image_attachments",
+            "class": "ImageAttachments",
+            "docs": "Responsable for managing image attachments",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "reports",
+            "class": "Reports",
+            "docs": "Responsable for managing reports",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "scripts",
+            "class": "Scripts",
+            "docs": "Responsable for managing scripts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

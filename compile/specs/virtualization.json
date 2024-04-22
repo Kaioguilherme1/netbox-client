@@ -1,0 +1,60 @@
+{
+    "Class_name": "virtualization",
+    "sub_classes": [
+        {
+            "name": "cluster_groups",
+            "class": "ClusterGroups",
+            "docs": "Reponsable for managing cluster groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "cluster_types",
+            "class": "ClusterTypes",
+            "docs": "Reponsable for managing cluster types",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "clusters",
+            "class": "Clusters",
+            "docs": "Reponsable for managing clusters",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "virtual_machines",
+            "class": "VirtualMachines",
+            "docs": "Reponsable for managing virtual machines",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "interfaces",
+            "class": "Interfaces",
+            "docs": "Reponsable for managing interfaces",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

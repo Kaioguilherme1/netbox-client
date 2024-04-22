@@ -1,0 +1,65 @@
+{
+    "Class_name": "Circuits",
+    "sub_classes": [
+        {
+            "name": "circuits",
+            "class": "CircuitsClass",
+            "docs": "Respomsible for managing circuits",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "circuit_types",
+            "class": "CircuitTypes",
+            "docs": "Responsible for managing circuit types",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "providers",
+            "class": "Providers",
+            "docs": "Responsible for managing providers of internet",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ],
+            "GET": {
+                "docs": "Get a list of providers",
+                "example": ">>> result = client.circuits.providers.get()",
+                "returns": "list of providers in dict: {status: 200, data: {result: [list of providers]}}"
+            }
+        },
+        {
+            "name": "provider_accounts",
+            "class": "ProviderAccounts",
+            "docs": "Responsible for managing provider accounts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "provider_networks",
+            "class": "ProviderNetworks",
+            "docs": "Responsible for managing provider networks",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 # Description of your package
 DESCRIPTION = """A Python package to interact with the NetBox API.
-        Version 1.0.2
+        Version 1.0.3
        - Resources:
        * organizations
        * devices
@@ -20,7 +20,7 @@ DESCRIPTION = """A Python package to interact with the NetBox API.
 
 setup(
     name='netboxcli',
-    version='1.0.2',
+    version='1.0.3',
     description=DESCRIPTION,
     packages=find_packages(),
     install_requires=[

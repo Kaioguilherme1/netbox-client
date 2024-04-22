@@ -1,1 +1,0 @@
-::: organization.contact_assignment

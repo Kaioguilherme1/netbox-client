@@ -1,0 +1,49 @@
+{
+    "Class_name": "Operations",
+    "sub_classes": [
+        {
+            "name": "data_sources",
+            "class": "DataSources",
+            "docs": "Responsable for managing data sources",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "webhooks",
+            "class": "Webhooks",
+            "docs": "Responsable for managing webhooks",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "jobs",
+            "class": "Jobs",
+            "docs": "Responsable for managing jobs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "journal_entries",
+            "class": "JournalEntries",
+            "docs": "Responsable for managing journal entries",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

@@ -1,12 +1,10 @@
 class VirtualChassisContexts:
     """
-    this class is used to create, retrieve, update, and delete resources of netbox api.
+    Responsable for managing virtual chassis contexts
 
     Args:
         core (obj): Core object for create, retrieve, update, and delete actions.
 
-    Attributes:
-        core (obj): Core object for create, retrieve, update, and delete actions.
     """
 
     def __init__(self, core):
@@ -19,9 +17,9 @@ class VirtualChassisContexts:
         tags: list = None,
         search: str = None,
         limit: int = 1000,
-    ):
+    ) -> dict:
         """
-        Retrieve a resource from the NetBox API based on ID, name, tags, or search query.
+        Get a resource from the virtual_chassis_contexts on ID, name, tags, or search query.
 
         Args:
             id (int, optional): The ID of the resource to retrieve.
@@ -30,47 +28,86 @@ class VirtualChassisContexts:
             search (str, optional): Search query to filter resources.
             limit (int, optional): Maximum number of results to return. Defaults to 1000.
 
+        Examples:
+            Create a new client:
+            >>> from netboxcli import Client
+            >>> nb = Client('http://localhost:8000', 'token')
+
+            Get a resource by ID:
+            >>> result = nb.devices.virtual_chassis_contexts.get(id=1)
+
+            Get a resource by name:
+            >>> result = nb.devices.virtual_chassis_contexts.get(name="resource_name")
+
+            Get resources by tags:
+            >>> result = nb.devices.virtual_chassis_contexts.get(tags=["tag1", "tag2"])
+
+            Get resources by search query:
+            >>> result = nb.devices.virtual_chassis_contexts.get(search="query")
+
+            Get all resources:
+            >>> result = nb.devices.virtual_chassis_contexts.get()
+
         Returns:
-            dict or list: If a single resource is found, returns a dictionary containing the data of the retrieved resource.
-                         If multiple resources are found, returns a list of dictionaries containing the data of the retrieved resources.
-                         If no resources are found, returns an empty list.
+            Returns a list with a status code and the request data in JSON format: {status: 200, data: {result: [list of virtual_chassis_contexts]}}
         """
         return self._core.get(id, name, tags, search, limit)
 
-    def create(self, data):
+    def create(self, data) -> dict:
         """
-        Create a new resource using the provided data.
+        Create a new resource in virtual_chassis_contexts using the provided data.
 
         Args:
             data (dict): Data to create the resource. It should contain all the necessary information to create the resource.
 
+        Examples:
+            Create a new client:
+            >>> from netboxcli import Client
+            >>> nb = Client('http://localhost:8000', 'token')
+
+            Create a new resource:
+            >>> data = {'name': 'resource_name'}
+            >>> result = nb.devices.virtual_chassis_contexts.create(data)
+
         Returns:
-            dict: Data of the created resource if successful.
-                  If the creation fails or if the data is invalid, returns None.
+            dict: {'status': 200, 'data': {'result': virtual_chassis_contexts]}}
         """
         return self._core.create(data)
 
-    def update(self, data):
+    def update(self, data) -> dict:
         """
-        Update an existing resource with the provided data.
+        Update an existing resource in virtual_chassis_contexts with the provided data.
 
         Args:
-            data (dict): Updated data for the resource. It should contain all the necessary information to update the resource.
+            data (dict): Updated data for the resource. It should contain id and optional fields to update, to default fields find in https://demo.netbox.dev/api/ .
 
-        Returns:
-            dict: Data of the resource after the update if successful.
-                  If the update fails or if the data is invalid, returns None.
+        Examples:
+            Create a new client:
+            >>> from netboxcli import Client
+            >>> nb = Client('http://localhost:8000', 'token')
+
+            Update a resource by ID:
+            >>> data = {'id': 1, 'name': 'new_name'}
+            >>> result = nb.devices.virtual_chassis_contexts.update(data)
         """
         return self._core.update(data)
 
-    def delete(self, id: int):
+    def delete(self, id: int) -> dict:
         """
         Delete a resource based on its ID.
 
         Args:
-            id (int): ID of the resource to delete.
+            id (int): ID of the resource in virtual_chassis_contexts to delete.
+
+        Examples:
+            Create a new client:
+            >>> from netboxcli import Client
+            >>> nb = Client('http://localhost:8000', 'token')
+
+            Delete a resource by ID:
+            >>> result = nb.devices.virtual_chassis_contexts.delete(id=1)
 
         Returns:
-            bool: True if deletion is successful, False otherwise.
+            [status_code, response]
         """
         return self._core.delete(id)

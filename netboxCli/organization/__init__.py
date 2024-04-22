@@ -1,6 +1,6 @@
 from netboxcli.core import Core
 
-from .contact_assignment import ContactAssignments
+from .contact_assignments import ContactAssignments
 from .contact_groups import ContactGroups
 from .contact_roles import ContactRoles
 from .contacts import Contacts

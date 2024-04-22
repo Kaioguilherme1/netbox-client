@@ -1,0 +1,170 @@
+{
+    "Class_name": "ipam",
+    "sub_classes": [
+        {
+            "name": "ip_addresses",
+            "class": "IpAddresses",
+            "docs": "Responsable for managing IP addresses",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "ip_ranges",
+            "class": "IpRanges",
+            "docs": "Responsable for managing IP ranges",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "prefixes",
+            "class": "Prefixes",
+            "docs": "Responsable for managing prefixes of ip addresses",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "prefix_roles",
+            "class": "PrefixRoles",
+            "docs": "Responsable for managing roles of prefixes",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "asn_ranges",
+            "class": "AsnRanges",
+            "docs": "Responsable for managing ranges of ASNs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "asns",
+            "class": "Asns",
+            "docs": "Responsable for managing ASNs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "aggregates",
+            "class": "Aggregates",
+            "docs": "Responsable for managing aggregates of ip addresses",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "rirs",
+            "class": "Rirs",
+            "docs": "Responsable for managing RIRs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "vrfs",
+            "class": "Vrfs",
+            "docs": "Responsable for managing VRFs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "router_targets",
+            "class": "RouterTargets",
+            "docs": "Responsable for managing router targets",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "vlans",
+            "class": "Vlans",
+            "docs": "Responsable for managing VLANs",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "vlan_groups",
+            "class": "VlanGroups",
+            "docs": "Responsable for managing VLAN groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "fhrp_groups",
+            "class": "FhrpGroups",
+            "docs": "Responsable for managing FHRP groups",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "services_templates",
+            "class": "ServicesTemplates",
+            "docs": "Responsable for managing services templates",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "services",
+            "class": "Services",
+            "docs": "Responsable for managing services",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}

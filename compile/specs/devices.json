@@ -1,0 +1,214 @@
+{
+    "Class_name": "devices",
+    "sub_classes": [
+        {
+            "name": "devices",
+            "class": "DevicesClass",
+            "docs": "Responsable for managing devices items",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "modules",
+            "class": "Modules",
+            "docs": "Responsable for managing modules items",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "devices_roles",
+            "class": "DevicesRoles",
+            "docs": "Responsable for managing devices roles",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "platforms",
+            "class": "Platforms",
+            "docs": "Responsable for managing platforms of Devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "virtual_chassis",
+            "class": "VirtualChassis",
+            "docs": "Responsable for managing virtual chassis of Devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "virtual_chassis_contexts",
+            "class": "VirtualChassisContexts",
+            "docs": "Responsable for managing virtual chassis contexts",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "device_types",
+            "class": "DeviceTypes",
+            "docs": "Responsable for managing device types",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "modules_types",
+            "class": "ModulesTypes",
+            "docs": "Responsable for managing modules types",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "manufacturers",
+            "class": "Manufacturers",
+            "docs": "Responsable for managing manufacturers of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "interfaces",
+            "class": "Interfaces",
+            "docs": "Responsable for managing interfaces of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "front_ports",
+            "class": "FrontPorts",
+            "docs": "Responsable for managing front ports of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "rear_ports",
+            "class": "RearPorts",
+            "docs": "Responsable for managing rear ports of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "console_ports",
+            "class": "ConsolePorts",
+            "docs": "Responsable for managing console ports of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "console_server_ports",
+            "class": "ConsoleServerPorts",
+            "docs": "Responsable for managing console server ports of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "power_ports",
+            "class": "PowerPorts",
+            "docs": "Responsable for managing power ports of devices",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "power_outlets",
+            "class": "PowerOutlets",
+            "docs": "Responsable for managing power outlets",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "modules_bays",
+            "class": "ModulesBays",
+            "docs": "Responsable for managing modules bays",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "inventory_items",
+            "class": "InventoryItems",
+            "docs": "Responsable for managing inventory items",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "inventory_items_roles",
+            "class": "InventoryItemsRoles",
+            "docs": "Responsable for managing inventory items roles",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE"
+            ]
+        }
+    ]
+}
