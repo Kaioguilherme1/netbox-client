@@ -17,6 +17,8 @@ build:
       - poetry config virtualenvs.create false
       - pip install pymdown-extensions --force
     post_install:
+      - pip install mkdocs-material
+      - pip install mkdocstrings
       - poetry install --only doc
 
 mkdocs: 
