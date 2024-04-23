@@ -24,7 +24,7 @@ classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent"
+    "Operating System :: OS Independent",
     "Topic :: System :: Networking",
     "Topic :: Software Development :: Libraries",
 ]
