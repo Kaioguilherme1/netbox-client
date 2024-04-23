@@ -5,7 +5,7 @@ edit_uri: tree/main/docs/
 
 theme: 
   name: material
-  language: pt-br
+  language: pt-BR
   features:
     - search.suggest
     - content.code.annotate
