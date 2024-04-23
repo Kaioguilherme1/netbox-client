@@ -1,22 +1,7 @@
 [tool.poetry]
 name = "netboxcli"
 version = "1.2.0"
-description = """A Python package to interact with the NetBox API.
-Version 1.2.0
-- Resources:
-* organizations
-* devices
-* connections
-* wireless
-* ipam
-* vpn
-* virtualization
-* circuits
-* power
-* provisioning
-* customization
-* operations
-"""
+description = "A Python package to interact with the NetBox API."
 authors = ["kaio Guilherme  <kaioguilherme444@gmail.com>"]
 readme = "README.md"
 packages = [{ include = "netboxcli", from = "." }]
