@@ -15,8 +15,9 @@ build:
     post_create_environment:
       - pip install poetry
       - poetry config virtualenvs.create false
+      - pip install pymdown-extensions --force
     post_install:
-      - poetry install
+      - poetry install --only doc
 
 mkdocs: 
   configuration: mkdocs.yml
