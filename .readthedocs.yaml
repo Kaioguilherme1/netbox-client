@@ -16,6 +16,10 @@ build:
       - pip install poetry
       - poetry config virtualenvs.create false
       - pip install pymdown-extensions --force
+      - pip install mkdocstrings --force
+      - pip install mkdocs-material --force
+      - pip install mkdocs-macros-plugin --force
+      - pip install jinja2 --force
     post_install:
       - poetry install --only doc
 
