@@ -1,7 +1,11 @@
 # Netbox Client
 
 
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+[![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+[![Documentation Status](https://readthedocs.org/projects/netboxcli/badge/?version=latest)](https://netboxcli.readthedocs.io/en/latest/?badge=latest)
+[![pipeline](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml)
+[![codecov](https://codecov.io/gh/Kaioguilherme1/netbox-client/graph/badge.svg?token=LMD2ILTE1N)](https://codecov.io/gh/Kaioguilherme1/netbox-client)
+[![PyPI version](https://badge.fury.io/py/netboxcli.svg)](https://badge.fury.io/py/netboxcli)
 ---
 
   O NetboxCli é um pacote Python projetado para simplificar e agilizar a interação com o NetBox, 
@@ -21,6 +25,8 @@
 * [✒️Autores](#Autores)
 * [📑Licença](#Licença)
 
+### Documentação Disponível [aqui](https://netboxcli.readthedocs.io/en/latest/)
+  
 ## 📄 Dependências 
   Lista as dependencias
   * requests
@@ -142,9 +148,9 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.0.3
+## 📌 Versão 1.2.0
 
-### **Adições na Versão 1.0.3**
+### **Adições na Versão 1.2.0**
 
 - **Atualização do Documetação:** Atualização da documentação usando docstrings.
 - **Adicionando CI no repositorio com github Actions:** Adicionando CI no repositorio com github Actions.

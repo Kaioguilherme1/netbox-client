@@ -22,5 +22,11 @@ jobs:
       run: poetry install --without doc
     
     - name: Run tests
-      run: poetry run task test
+      run: poetry run task test --cov-report=xml
+
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: Kaioguilherme1/netbox-client
         
