@@ -1,7 +1,7 @@
 # Netbox Client
 
 
-[![Documentation Status](https://readthedocs.org/projects/netboxcli/badge/?version=latest)](https://netboxcli.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/netboxcli/badge/?version=latest)](https://netboxcli.readthedocs.io/pt/latest/?badge=latest)
 [![pipeline](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml)
 [![codecov](https://codecov.io/gh/Kaioguilherme1/netbox-client/graph/badge.svg?token=LMD2ILTE1N)](https://codecov.io/gh/Kaioguilherme1/netbox-client)
 [![PyPI version](https://badge.fury.io/py/netboxcli.svg)](https://badge.fury.io/py/netboxcli)
@@ -24,7 +24,7 @@
 * [✒️Autores](#Autores)
 * [📑Licença](#Licença)
 
-### Documentação Disponível [aqui](https://netboxcli.readthedocs.io/en/latest/)
+### Documentação Disponível [aqui](https://netboxcli.readthedocs.io/pt/latest/)
   
 ## 📄 Dependências 
   Lista as dependencias

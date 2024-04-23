@@ -16,7 +16,7 @@ classifiers = [
 
 [tool.poetry.urls]
 "Homepage" = "https://github.com/Kaioguilherme1/netbox-client"
-"Documentation" = "https://netboxcli.readthedocs.io/en/latest/"
+"Documentation" = "https://netboxcli.readthedocs.io/pt/latest/"
 "Bug Tracker" = "https://github.com/Kaioguilherme1/netbox-client/issues"
 
 [tool.poetry.dependencies]
