@@ -1,7 +1,7 @@
 # Netbox Client
 
 
-[![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 [![Documentation Status](https://readthedocs.org/projects/netboxcli/badge/?version=latest)](https://netboxcli.readthedocs.io/en/latest/?badge=latest)
 [![pipeline](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml)
 [![codecov](https://codecov.io/gh/Kaioguilherme1/netbox-client/graph/badge.svg?token=LMD2ILTE1N)](https://codecov.io/gh/Kaioguilherme1/netbox-client)

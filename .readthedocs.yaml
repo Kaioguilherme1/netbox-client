@@ -5,6 +5,9 @@
 # Required
 version: 2
 
+mkdocs: 
+  configuration: mkdocs.yml
+
 # Set the OS, Python version and other tools you might need
 build:
   os: ubuntu-22.04
@@ -17,6 +20,4 @@ build:
     post_install:
       - poetry install --only doc
 
-mkdocs: 
-  configuration: mkdocs.yml
   
