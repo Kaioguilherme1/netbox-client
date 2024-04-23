@@ -13,13 +13,9 @@ build:
     python: "3.12"
   jobs: 
     post_create_environment:
-      - pip install poetry
-      - poetry config virtualenvs.create false
-      - pip install pymdown-extensions --force
-    post_install:
-      - pip install mkdocs-material
-      - pip install mkdocstrings
-      - poetry install --only doc
+      - pip3 install mkdocs-material mkdocstrings mkdocstrings-python mkdocs-macros-plugin jinja2
+    
+    
 
 mkdocs: 
   configuration: mkdocs.yml
