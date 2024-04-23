@@ -12,6 +12,9 @@ dist/
 *.egg-info/
 .env
 
+# Poetry
+poetry.lock
+
 # Compiled Python files
 *.pyc
 *.pyo
