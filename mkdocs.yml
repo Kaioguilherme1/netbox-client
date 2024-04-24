@@ -35,6 +35,7 @@ theme:
 markdown_extensions: 
   - attr_list
   - admonition
+  - pymdownx.details
   - pymdownx.tasklist
   - pymdownx.superfences:
       custom_fences:
@@ -43,17 +44,18 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 plugins: 
-- search
-- mkdocstrings:
-    default_handler: python
-    handlers:
-      python: 
-        paths: [netboxcli]
-        options:
-          show_symbol_type_heading: true
-          show_symbol_type_toc: true
-          show_source: false
-          show_inheritance_diagram: true
+  - termynal
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python: 
+          paths: [netboxcli]
+          options:
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            show_source: false
+            show_inheritance_diagram: true
 
 extra: 
   social:

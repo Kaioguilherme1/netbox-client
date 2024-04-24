@@ -13,7 +13,7 @@ build:
     python: "3.12"
   jobs: 
     post_create_environment:
-      - pip3 install mkdocs-material mkdocstrings mkdocstrings-python mkdocs-macros-plugin jinja2
+      - pip3 install mkdocs-material mkdocstrings mkdocstrings-python mkdocs-macros-plugin jinja2 termynal
     
     
 

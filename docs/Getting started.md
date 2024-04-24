@@ -1,106 +1,133 @@
 # Getting started
 
-Este guia fornece uma visão geral do Netboxcli e como começar a usá-lo para interagir com o NetBox.
+- Breve visão geral do NetBox, uma plataforma open-source para gestão de infraestrutura IP.
+- Explicação sobre a API RESTful do NetBox, que permite interagir com os dados e funcionalidades do NetBox programaticamente.
 
-```mermaid
-graph TD;
-    A[netboxcli] --> B[core];
-    A --> C[Client];
-    C --> D[organizations];
-    C --> E[devices];
-    C --> F[connections];
-    C --> G[wireless];
-    C --> H[ipam];
-    C --> I[vpn];
-    C --> J[virtualization];
-    C --> K[circuits];
-    C --> L[power];
-    C --> M[provisioning];
-    C --> N[customization];
-    C --> O[operations];
-```
-## 📄 Dependências
-Lista as dependencias
-* requests
-* python 3.11 ou superior
-* [netbox >=3.7.5](https://github.com/netbox-community/netbox)
+## 2. Configuração do Ambiente de Desenvolvimento:
 
-## 🔧Instalação
+- Instruções para configurar um ambiente de desenvolvimento, incluindo a instalação de Python e outras dependências necessárias.
 
-### 📁 Acesso ao projeto
+## 3. Autenticação com o netboxcli:
 
-Apresentar formas de baixar seu projeto.
+- Explicação sobre os diferentes métodos de autenticação suportados pelo NetBox API (por exemplo, token de acesso, autenticação básica).
+- Instruções para obter as credenciais de autenticação necessárias para interagir com a API.
 
-[PiP](https://pypi.org/project/netboxcli/)
+## 4. Uso Básico:
 
-[Baixar projeto](https://github.com/Kaioguilherme1/netbox-client/archive/refs/heads/main.zip)
-#### Baixar o pacote via terminal.
-```
-pip install netboxcli
-```
-## ⚙️ Uso
+- Demonstração de como realizar operações simples, como recuperar informações de dispositivos, endereços IP, VLANs, etc.
+- Códigos de exemplo em Python para mostrar como fazer requisições HTTP para a API do NetBox e manipular as respostas.
 
-O NetboxCli é uma ferramenta poderosa para interagir com o NetBox de maneira simples e eficiente. Ele oferece classes consistentes com métodos padronizados para lidar com diversas funcionalidades, incluindo IPAM e Virtualização. Você pode navegar entre as classes da mesma forma que nas abas do NetBox. Aqui estão os passos básicos para começar a usar o NetboxCli:
+### 1. Criando um site:
 
-### Importando o Módulo e Preparando a Conexão
+```py linenums="1"
+from netboxcli import Client
 
-Antes de começar a interagir com o NetBox, você precisa importar o módulo `netboxcli` e criar um objeto NetBox para estabelecer a conexão com o servidor. Substitua `'sua_url_aqui'` pelo endereço IP e porta do seu servidor NetBox e `'seu_token_aqui'` pelo seu token de API.
+nb = Client('http://localhost:8000', 'token')
 
-```python
-import netboxcli as nb
-import json
-
-def printj(data):
-    print(json.dumps(data, indent=4))
-
-# Criar um objeto NetBox
-nb_client = nb.Client('sua_url_aqui', 'seu_token_aqui')
-
-```
-
-### Utilizando Classes Finais Padrão
-
-Todas as classes finais no NetboxCli têm os mesmos nomes que as classes do NetBox por padrão. Isso facilita a navegação e a familiarização com a estrutura. Aqui estão alguns exemplos de como você pode usar essas classes e seus métodos padronizados:
-
-### Exemplo de IPAM: Criar um Novo Bloco de Endereços IP
-
-```python
-# Exemplo de criação de um novo bloco de endereços IP
-ip_block_data = {
-    "prefix": "192.168.10.0/24",
-    "description": "Bloco de IPs para Servidores",
-    "vlan": 100
+site = {
+    "name": "organization-1",
+    "status": "active",
 }
 
-new_ip_block = nb_client.ipam.prefixes.create(ip_block_data)
+result = nb.organization.sites.create(site)
+
+print('Status: ', result['status'])
+print('Data: ', result['data'])
+```
+
+resultado esperado:
+
+<!-- termynal -->
+
+```
+$ python example.py
+
+Status:  201
+Data:  {"id":1,"url":"http://localhost:8000/api/dcim/sites/2/","display":"organization-1","name":"organization-1"...}
 
 ```
 
-### Exemplo de Virtualização: Obter uma Máquina Virtual por ID
+O Retorno da função vem no formato de um dicionário com duas chaves, onde:
 
-```python
-# Exemplo de obtenção de uma máquina virtual por ID
-vm_by_id = nb_client.virtualization.virtual_machines.get(id=1)
+- **Status:** retorna o código de status da requisição HTTP (por exemplo, 201 para criado, 404 para não encontrado, etc.).
+- **Data:** retorna um objeto JSON com os detalhes do site criado.
+
+### 2. Listando todos os sites:
+
+```py linenums="1"
+from netboxcli import Client
+
+nb = Client('http://localhost:8000', 'token')
+
+result = nb.organization.sites.get()
+
+print('Status: ', result['status'])
+print('Data: ', result['data'])
 
 ```
 
-### Exemplo de IPAM: Atualizar um Bloco de Endereços IP
+resultado esperado:
 
-```python
-# Exemplo de atualização de um bloco de endereços IP
-updated_ip_block_data = {
-    "id": 1,
-    "description": "Novo Descrição para o Bloco de IPs"
+<!-- termynal -->
+
+```
+$ python example.py
+Status:  200
+Data:  {'count': 1, 'next': None, 'previous': None, 'results': [{'id': 2, 'url': 'http://192.168.20.3:8000/api/dcim/sites/2/', 'display': 'organization-1',...]}
+```
+O Retorno da função vem no formato de um dicionário com duas chaves, onde:
+
+- **Status:** retorna o código de status da requisição HTTP (por exemplo, 200 para OK, 404 para não encontrado, etc.).
+- **Data:** retorna um objeto JSON com os detalhes dos sites encontrados.
+
+!!! note
+    - O método `get()` sem argumentos retorna todos os sites cadastrados no NetBox em uma lista dentro da Data
+    - para pegar somente a lista use `result['data']['results']`
+
+!!! info
+    - a função `get()` aceita argumentos para filtrar os resultados, como `id`, `name`, `[tags]`,`search` e `limit` 
+    - mais informações sobre os argumentos podem ser encontradas na [Organization.sites](/Client/organization/sites/)
+
+### 3. Atualizando um site:
+
+```py linenums="1"
+from netboxcli import Client
+
+nb = Client('http://localhost:8000', 'token')
+
+site = {
+    "id": 1, # site id e obrigatorio para atualizar
+    "status": "planned",
+    "description": "This is a test site",
 }
 
-updated_ip_block = nb_client.ipam.prefixes.update(updated_ip_block_data)
+result = nb.organization.sites.update()
+
+print('Status: ', result['status'])
+print('Data: ', result['data'])
+```
+resultado esperado:
+
+<!-- termynal -->
 
 ```
+$ python example.py
 
-### Exemplo de Virtualização: Excluir uma Máquina Virtual
 
-```python
-# Exemplo de exclusão de uma máquina virtual pelo ID
-deleted_vm_id = nb_client.virtualization.virtual_machines.delete(id=1)
 
-```
+
+## 5. Tratamento de Erros e Exceções:
+
+- Orientações sobre como lidar com possíveis erros e exceções que podem ocorrer durante o uso da biblioteca.
+- Sugestões sobre como implementar tratamentos adequados de erros para garantir a robustez do código.
+
+## 6. Avançando com a Biblioteca:
+
+- Exploração de recursos avançados oferecidos pela biblioteca, como paginação, filtros e ordenação de resultados.
+- Exemplos mais complexos de uso da API para realizar operações como criação, atualização e exclusão de objetos no NetBox.
+
+## 7. Recursos Adicionais:
+
+- Links para a documentação oficial do NetBox API para referência adicional.
+- Sugestões de outros recursos, como fóruns de discussão, grupos de usuários ou comunidades online, onde os desenvolvedores podem buscar suporte e compartilhar conhecimento.
+
