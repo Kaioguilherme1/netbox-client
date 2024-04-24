@@ -33,6 +33,8 @@ blue = "^0.9.1"
 isort = "^5.13.2"
 taskipy = "^1.12.2"
 setuptools = "^69.5.1"
+cz-conventional-gitmoji = "^0.3.0"
+commitizen = "^3.24.0"
 
 
 [tool.poetry.group.doc.dependencies]
@@ -45,11 +47,13 @@ termynal = "^0.12.1"
 
 
 [tool.commitizen]
-name = "cz_conventional_commits"
-tag_format = "$version"
+name = "cz_gitmoji"
+tag_format = "V$version"
 version_scheme = "pep440"
 version_provider = "poetry"
 update_changelog_on_bump = true
+
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
