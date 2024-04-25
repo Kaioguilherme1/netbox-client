@@ -1,5 +1,6 @@
 import json
 import os
+import sys
 
 from api_structure import class_header, metods
 
@@ -51,7 +52,7 @@ def code():
 
 
 def docs():
-    root_path = '../docs/api'
+    root_path = '../docs/client'
     api = read_specs()
     for folder in api:
         folder_name = folder['Class_name']
@@ -77,8 +78,7 @@ def docs():
                 file.write(content)
 
 
-def __main__():
-    import sys
+def main():
 
     if len(sys.argv) > 1:
         if sys.argv[1] == 'docs':
@@ -89,3 +89,7 @@ def __main__():
             print('Invalid argument.')
     else:
         print('No argument provided.')
+
+
+if __name__ == '__main__':
+    main()

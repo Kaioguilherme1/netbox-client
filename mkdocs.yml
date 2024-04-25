@@ -1,4 +1,4 @@
-site_name: Netbox Client
+site_name: Netboxcli
 repo_url: https://github.com/Kaioguilherme1/netbox-client
 repo_name: Kaioguilherme1/netbox-client
 edit_uri: tree/main/docs/
@@ -6,6 +6,7 @@ edit_uri: tree/main/docs/
 theme: 
   name: material
   language: pt-BR
+  custom_dir: docs/overrides
   features:
     - search.suggest
     - content.code.annotate
@@ -33,17 +34,21 @@ theme:
         name: Switch to system preference
 
 markdown_extensions: 
+  - tables
   - attr_list
   - admonition
   - pymdownx.details
   - pymdownx.tasklist
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg 
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
-plugins: 
+plugins:
   - termynal
   - search
   - mkdocstrings:

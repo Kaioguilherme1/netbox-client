@@ -15,7 +15,17 @@ class Core:
         self._endpoint = endpoint
 
     def create(self, data) -> dict:
-        data['slug'] = self._netbox._slug(data['name'])
+        if isinstance(data, dict):
+            if not data['name']:
+                return {'status': 400, 'data': 'Name is required.'}
+
+            data['slug'] = self._netbox._slug(data['name'])
+        elif isinstance(data, list):
+            for item in data:
+                item['slug'] = self._netbox._slug(item['name'])
+        else:
+            return {'status': 400, 'data': 'Invalid data type.'}
+
         response = self._netbox._request('post', f'{self._endpoint}', data)
         return response
 
@@ -73,7 +83,7 @@ class Core:
             else:
                 return response
 
-    def update(self, data) -> dict:
+    def update(self, data: list) -> dict:
         return self._netbox._request('put', f'{self._endpoint}', data)
 
     def delete(self, id: int) -> dict:

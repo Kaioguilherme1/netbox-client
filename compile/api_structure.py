@@ -18,8 +18,8 @@ metods = {
         Create a new resource in {subclass} using the provided data.
         
         Args:
-            data (dict): Data to create the resource. It should contain all the necessary information to create the resource.
-        
+            data (list or dict): Data it can be a dictionary or a list of dictionaries containing the information to create the resource.
+            
         Examples:
             Create a new client:
             >>> from netboxcli import Client
@@ -79,20 +79,20 @@ metods = {
         return self._core.get(id, name, tags, search, limit)
     ''',
     'PUT': '''
-    def update(self, data) -> dict:
+    def update(self, data: list) -> dict:
         """
         Update an existing resource in {subclass} with the provided data.
         
         Args:
-            data (dict): Updated data for the resource. It should contain id and optional fields to update, to default fields find in https://demo.netbox.dev/api/ .
-        
+            data (list): List of dictionaries containing the updated data for the resources.
+            
         Examples:
             Create a new client:
             >>> from netboxcli import Client
             >>> nb = Client('http://localhost:8000', 'token')
             
             Update a resource by ID:
-            >>> data = {{'id': 1, 'name': 'new_name'}}
+            >>> data = [{{'id': 1, 'name': 'new_name'}}]
             >>> result = nb.{class_main}.{subclass}.update(data)
         """
         return self._core.update(data)

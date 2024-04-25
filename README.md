@@ -14,9 +14,10 @@
 
 ## Índice
 * [Netbox Client](#netbox-client)
-* [Índice](#Índice)
 * [📄Dependências](#Dependências)
 * [🔧Instalação](#Instalação)
+* [🚀 Getting Started](https://netboxcli.readthedocs.io/pt/latest/Getting%20started/)
+* [📝Documentação](https://netboxcli.readthedocs.io/pt/latest/)
 * [⚙️Uso](#uso)
 * [📦Desenvolvimento](#Desenvolvimento)
 * [📌Versão](#Versão)
@@ -29,25 +30,16 @@
 ## 📄 Dependências 
   Lista as dependencias
   * requests
-  * python 3.11 ou superior
+  * python 3.12 ou superior
   * [netbox >=3.7.5](https://github.com/netbox-community/netbox)
-  
-## 🔧Instalação
 
-### 📁 Acesso ao projeto
+## 🔧 Instalação
 
-Apresentar formas de baixar seu projeto.
-
-[PiP](https://pypi.org/project/netboxcli/)
-
-[Baixar projeto](https://github.com/Kaioguilherme1/netbox-client/archive/refs/heads/main.zip)
-#### Baixar o pacote via terminal.
 ```
 pip install netboxcli
 ```
-## ⚙️ Uso
 
-O NetboxCli é uma ferramenta poderosa para interagir com o NetBox de maneira simples e eficiente. Ele oferece classes consistentes com métodos padronizados para lidar com diversas funcionalidades, incluindo IPAM e Virtualização. Você pode navegar entre as classes da mesma forma que nas abas do NetBox. Aqui estão os passos básicos para começar a usar o NetboxCli:
+## ⚙️ uso
 
 ### Importando o Módulo e Preparando a Conexão
 
@@ -111,15 +103,13 @@ updated_ip_block = nb_client.ipam.prefixes.update(updated_ip_block_data)
 deleted_vm_id = nb_client.virtualization.virtual_machines.delete(id=1)
 
 ```
+para mais exemplos de uso acesse a [documentação](https://netboxcli.readthedocs.io/pt/latest/Getting%20started/)
 
 ### Personalizando e Extendendo
 
 Além das operações básicas, você pode personalizar e estender as funcionalidades do NetboxCli de acordo com suas necessidades específicas. As classes finais oferecem uma base sólida para construir interações mais avançadas com a API do NetBox.
 
 Lembre-se de substituir os exemplos de dados e IDs pelos valores reais correspondentes ao seu ambiente NetBox.
-## 📦 Desenvolvimento
-
-Nesta seção, você encontrará informações sobre o desenvolvimento contínuo do NetboxCli. Estamos trabalhando para expandir as funcionalidades e fornecer suporte abrangente para todas as abas disponíveis no NetBox 3.5 e versões posteriores. Atualizações e novas funcionalidades serão lançadas com o tempo, conforme o projeto evolui.
 
 ### Objetivo
 
@@ -147,12 +137,13 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.2.0
+## 📌 Versão 1.1.5
 
-### **Adições na Versão 1.2.0**
+### **Adições na Versão 1.1.5**
 
-- **Atualização do Documetação:** Atualização da documentação usando docstrings.
-- **Adicionando CI no repositorio com github Actions:** Adicionando CI no repositorio com github Actions.
+- **Correções de Bugs: ** Correção de bugs menores e melhorias de desempenho em todo o código.
+- **Melhorias de Desempenho: ** Otimização de consultas e operações para melhorar o desempenho geral do NetboxCli.
+
 ## ✒️ Autores
 
 * **developer** - *Initial Work* - [Kaio Guilherme](https://github.com/Kaioguilherme1)

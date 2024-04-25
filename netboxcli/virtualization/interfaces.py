@@ -58,7 +58,7 @@ class Interfaces:
         Create a new resource in interfaces using the provided data.
 
         Args:
-            data (dict): Data to create the resource. It should contain all the necessary information to create the resource.
+            data (list or dict): Data it can be a dictionary or a list of dictionaries containing the information to create the resource.
 
         Examples:
             Create a new client:
@@ -74,12 +74,12 @@ class Interfaces:
         """
         return self._core.create(data)
 
-    def update(self, data) -> dict:
+    def update(self, data: list) -> dict:
         """
         Update an existing resource in interfaces with the provided data.
 
         Args:
-            data (dict): Updated data for the resource. It should contain id and optional fields to update, to default fields find in https://demo.netbox.dev/api/ .
+            data (list): List of dictionaries containing the updated data for the resources.
 
         Examples:
             Create a new client:
@@ -87,7 +87,7 @@ class Interfaces:
             >>> nb = Client('http://localhost:8000', 'token')
 
             Update a resource by ID:
-            >>> data = {'id': 1, 'name': 'new_name'}
+            >>> data = [{'id': 1, 'name': 'new_name'}]
             >>> result = nb.virtualization.interfaces.update(data)
         """
         return self._core.update(data)

@@ -4,41 +4,46 @@
 [![pipeline](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/Kaioguilherme1/netbox-client/actions/workflows/pipeline.yml)
 [![codecov](https://codecov.io/gh/Kaioguilherme1/netbox-client/graph/badge.svg?token=LMD2ILTE1N)](https://codecov.io/gh/Kaioguilherme1/netbox-client)
 [![PyPI version](https://badge.fury.io/py/netboxcli.svg)](https://badge.fury.io/py/netboxcli)
+
 ---
----
 
-O NetboxCli é um pacote Python projetado para simplificar e agilizar a interação com o NetBox,
-uma popular plataforma de gerenciamento de infraestrutura de rede de código aberto.
-Com este pacote, você pode facilmente interagir com as funcionalidades do NetBox,
-como gerenciamento de endereços IP (IPAM) e virtualização.
+## :fontawesome-brands-free-code-camp: Começando com netboxcli
 
-## Índice
-* [Netbox Client](#netbox-client)
-* [Índice](#Índice)
-* [⚙️Getting started]('Getting started.md')
-* [📦Desenvolvimento](#Desenvolvimento)
-* [📌Versão](#Versão)
-* [👥Colaboradores](#Colaboradores)
-* [✒️Autores](#Autores)
-* [📑Licença](#Licença)
+Bem-vindo ao netboxcli, uma poderosa biblioteca Python projetada para simplificar a interação com o NetBox. Se você está buscando automatizar tarefas de gerenciamento de infraestrutura ou integrar o NetBox com outras plataformas, o netboxcli é a ferramenta certa para você.
 
+### :octicons-code-24: O que é netboxcli?
 
+O netboxcli é uma biblioteca Python que oferece classes e métodos para interagir com o [NetBox](https://docs.netbox.dev/en/stable/), uma plataforma de gerenciamento de infraestrutura de IP de código aberto. Com o netboxcli, você pode automatizar tarefas, simplificar processos e criar sistemas automatizados para gerenciar sua infraestrutura de forma eficiente.
 
-### Personalizando e Extendendo
+### :material-table-question: Por que usar netboxcli?
 
-Além das operações básicas, você pode personalizar e estender as funcionalidades do NetboxCli de acordo com suas necessidades específicas. As classes finais oferecem uma base sólida para construir interações mais avançadas com a API do NetBox.
+- **Simplificação da interação:** O netboxcli simplifica a interação com o NetBox, oferecendo uma interface Python amigável para realizar operações comuns.
+- **Automação de tarefas:** Automatize tarefas rotineiras de gerenciamento de infraestrutura, economizando tempo e recursos.
+- **Integração com outras plataformas:** Integre o NetBox com outras plataformas, como o [Proxmox](https://www.proxmox.com/proxmox-ve), para criar soluções mais robustas e completas.
+- **Documentação dinâmica:** Use o netboxcli para documentar sua infraestrutura de forma dinâmica, mantendo sempre atualizadas as informações sobre seus dispositivos, endereços IP e outros recursos.
 
-Lembre-se de substituir os exemplos de dados e IDs pelos valores reais correspondentes ao seu ambiente NetBox.
-## 📦 Desenvolvimento
+## :octicons-rocket-24: Por onde começar?
 
-Nesta seção, você encontrará informações sobre o desenvolvimento contínuo do NetboxCli. Estamos trabalhando para expandir as funcionalidades e fornecer suporte abrangente para todas as abas disponíveis no NetBox 3.5 e versões posteriores. Atualizações e novas funcionalidades serão lançadas com o tempo, conforme o projeto evolui.
+Para começar a usar o netboxcli, você pode acessar a página de [Getting Started](Getting%20started.md), onde encontrará informações sobre instalação, configuração inicial e autenticação com o NetBox.
 
-### Objetivo
+## :simple-googledocs: Documentação
+
+Para obter mais informações sobre o netboxcli, consulte a [documentação detalhada](client/index.md), que inclui referências detalhadas da API, exemplos de código e guias de uso.
+
+## :material-hand-wave: Contribuindo
+
+Se você deseja contribuir com o netboxcli, seu apoio é muito bem-vindo! Consulte o [guia de contribuição](contributing.md) para obter orientações sobre como começar e diretrizes para enviar suas contribuições.
+
+## :fontawesome-solid-box: Desenvolvimento
+
+Estamos trabalhando para expandir as funcionalidades e fornecer suporte abrangente para todas as abas disponíveis no NetBox 3.5 e versões posteriores. Atualizações e novas funcionalidades serão lançadas com o tempo, conforme o projeto evolui.
+
+### :material-progress-star: Objetivo
 
 O objetivo do projeto NetboxCli é fornecer uma interface Python simples e eficiente para interagir com o NetBox.
 oferecendo uma alternativa conveniente para os administradores de rede que desejam automatizar tarefas e gerenciar recursos de infraestrutura de maneira mais fácil.
 
-## Checklist de Desenvolvimento
+## :material-checkbox-marked-circle-minus-outline: Checklist de Desenvolvimento
 
 Aqui está um checklist do que está atualmente disponível no NetboxCli e do que será adicionado no futuro:
 
@@ -59,16 +64,10 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas.
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.2.0
-
-### **Adições na Versão 1.2.0**
-
-- **Atualização do Documetação:** Atualização da documentação usando docstrings.
-- **Adicionando CI no repositorio com github Actions:** Adicionando CI no repositorio com github Actions.
-## ✒️ Autores
+## :material-fountain-pen-tip: Autores
 
 * **developer** - *Initial Work* - [Kaio Guilherme](https://github.com/Kaioguilherme1)
 
-## 📑 Licença
+## :material-license: Licença
 
 Esse projeto esta sob a licença(MIT) - veja o arquivo [Licenca.md](https://github.com/Kaioguilherme1/netbox-client/blob/main/Licenca) para mais detalhes.

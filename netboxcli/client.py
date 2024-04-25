@@ -85,7 +85,7 @@ class Client:
                 method, url, json=data, headers=self._headers
             )
         except requests.exceptions.RequestException as e:
-            result['status'] = 111
+            result['status'] = 0
             result['data'] = e
             return result
 
