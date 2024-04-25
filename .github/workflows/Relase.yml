@@ -16,9 +16,11 @@ jobs:
         with:
           fetch-depth: 0
           token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install cz-conventional-gitmoji
+      
       - name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
-        run: pip install --upgrade pip && pip install cz-conventional-gitmoji
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           changelog_increment_filename: chagelog.md
