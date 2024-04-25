@@ -137,12 +137,13 @@ Aqui está um checklist do que está atualmente disponível no NetboxCli e do qu
 Este checklist será atualizado à medida que novas funcionalidades forem implementadas. 
 Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o NetboxCli mais abrangente e útil para suas necessidades de automação e gerenciamento de rede.
 
-## 📌 Versão 1.1.5
+## 📌 Versão 1.1.7
 
-### **Adições na Versão 1.1.5**
+### **Adições na Versão 1.1.7**
 
 - **Correções de Bugs: ** Correção de bugs menores e melhorias de desempenho em todo o código.
 - **Melhorias de Desempenho: ** Otimização de consultas e operações para melhorar o desempenho geral do NetboxCli.
+- **Atualizações de Documentação: ** Atualizações e melhorias na documentação para refletir as mudanças mais recentes.
 
 ## ✒️ Autores
 
