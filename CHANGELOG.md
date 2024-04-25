@@ -1,3 +1,9 @@
+## Unreleased
+
+### 📝💡 Documentation
+
+- **netboxcli-docstrings**: add reference tags
+
 ## V1.1.7 (2024-04-24)
 
 ### 📝💡 Documentation

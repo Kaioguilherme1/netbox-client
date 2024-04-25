@@ -1,6 +1,6 @@
 class Core:
     """
-    Core class for Netbox API
+    Core class for Netbox API, responsible for requests to the API.
     """
 
     def __init__(self, netbox: object, endpoint: str):
@@ -15,6 +15,15 @@ class Core:
         self._endpoint = endpoint
 
     def create(self, data) -> dict:
+        """
+        Create a new resource in Netbox using the provided data.
+
+        Args:
+            data: (list or dict): The data to be used to create the resource.
+
+        Returns:
+            dict: Returns a dictionary with the status code and the request data in JSON format: {status: 200, data: {respondse}}
+        """
         if isinstance(data, dict):
             if not data['name']:
                 return {'status': 400, 'data': 'Name is required.'}
@@ -37,6 +46,19 @@ class Core:
         search: str = None,
         limit: int = 1000,
     ) -> dict:
+        """
+        Get a resource from the endpoint on ID, name, tags, or search query.
+
+        Args:
+            id: (int): The ID of the resource to retrieve.
+            name: (str): The name of the resource to retrieve.
+            tags: (list): List of tags to filter resources.
+            search: (str): Search query to filter resources.
+            limit: (int): Maximum number of results to return. Defaults to 1000.
+
+        Returns:
+            dict: Returns a dictionary with the status code and the request data in JSON format: {status: 200, data: {respondse}}.
+        """
 
         result = {'status': None, 'data': None}
         if id:
@@ -84,7 +106,24 @@ class Core:
                 return response
 
     def update(self, data: list) -> dict:
+        """
+        Update a resource in Netbox using the provided data.
+        Args:
+            data: (list): The data to be used to update the resource.
+
+        Returns:
+            dict: Returns a dictionary with the status code and the request data in JSON format: {status: 200, data: {respondse}}
+
+        """
         return self._netbox._request('put', f'{self._endpoint}', data)
 
     def delete(self, id: int) -> dict:
+        """
+        Delete a resource in Netbox based on its ID.
+        Args:
+            id: (int): The ID of the resource to delete.
+
+        Returns:
+            dict: Returns a dictionary with the status code and the request data in JSON format: {status: 200, data: {respondse}}
+        """
         return self._netbox._request('delete', f'{self._endpoint}{id}/')

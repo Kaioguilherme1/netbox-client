@@ -55,11 +55,20 @@ plugins:
       handlers:
         python: 
           paths: [netboxcli]
+          import:
+            - https://docs.python.org/3/objects.inv
+            - https://mkdocstrings.github.io/objects.inv
+            - https://mkdocstrings.github.io/griffe/objects.inv
           options:
+            show_signature_annotations: true
+            show_root_toc_entry: true
             show_symbol_type_heading: true
             show_symbol_type_toc: true
             show_source: false
-            show_inheritance_diagram: true
+            signature_crossrefs: false
+            show_bases: true
+            summary: true
+            annotations_path: brief
 
 extra: 
   social:

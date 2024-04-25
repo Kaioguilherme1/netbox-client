@@ -16,21 +16,33 @@ from .wireless import Wireless
 
 class Client:
     """
-    Netbox API client to interact with the Netbox API.
+    Netbox API client to interact with the Netbox API, main class to interact other classes,
+    this class is responsible for the authentication and the base URL to interact with the API.
+
+    Args:
+        API_IP (str): The IP address of the Netbox API.
+        API_TOKEN (str): The token to authenticate with the Netbox API.
+
+    Examples:
+        >>> from netboxcli import Client
+        >>> client = Client('http://localhost:8000','9437417491269694621969126946')
+
+    Attributes:
+        organization (Organization): The organization object.
+        devices (Devices): The devices object.
+        connections (Connections): The connections object.
+        wireless (Wireless): The wireless object.
+        ipam (Ipam): The ipam object.
+        vpn (Vpn): The vpn object.
+        virtualization (Virtualization): The virtualization object.
+        circuits (Circuits): The circuits object.
+        power (Power): The power object.
+        provisioning (Provisioning): The provisioning object.
+        customization (Customization): The customization object.
+        operations (Operations): The operations object.
     """
 
     def __init__(self, API_IP: str, API_TOKEN: str):
-        """
-        Initialize the Netbox API client for connecting to the Netbox API.
-
-        Args:
-            API_IP (str): The IP address of the Netbox API.
-            API_TOKEN (str): The token to authenticate with the Netbox API.
-
-        Examples:
-            >>> from netboxcli import Client
-            >>> client = Client('http://localhost:8000','9437417491269694621969126946')
-        """
         self.organization = Organization(self)
         self.devices = Devices(self)
         self.connections = Connections(self)
