@@ -6,7 +6,6 @@ edit_uri: tree/main/docs/
 theme: 
   name: material
   language: pt-BR
-  custom_dir: docs/overrides
   features:
     - search.suggest
     - content.code.annotate
