@@ -70,6 +70,7 @@ line_length = 79
 lint = "blue --check --diff . && isort --check --diff ."
 lint-fix = "blue . && isort ."
 docs = "mkdocs serve -a 0.0.0.0:8080"
+commit = "cz changelog && git add CHANGELOG.md && cz commit"
 pre_test = "task lint"
 test = "pytest -s -x --cov=netboxcli -vv"
 post_test = "coverage html"
