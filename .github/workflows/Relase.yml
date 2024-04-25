@@ -18,6 +18,7 @@ jobs:
           token: "${{ secrets.PERSONAL_ACCESS_TOKEN }}"
       - name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
+        run: pip install cz_gitmoji
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           changelog_increment_filename: chagelog.md

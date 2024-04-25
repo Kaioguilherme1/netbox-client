@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "netboxcli"
-version = "1.1.5"
+version = "1.1.6" 
 description = "A Python package to interact with the NetBox API."
 authors = ["kaio Guilherme  <kaioguilherme444@gmail.com>"]
 readme = "README.md"
