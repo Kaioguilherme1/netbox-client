@@ -1,13 +1,3 @@
-## Unreleased
-
-### 💚👷 CI & Build
-
-- **relase**: fix
-- **relase**: test
-- **relase**: fix
-- **relase**: update
-- **relase**: CI auto release correction
-
 ## V1.1.6 (2024-04-24)
 
 ### 🐛🚑️ Fixes
@@ -21,7 +11,16 @@
 
 ### 💚👷 CI & Build
 
+- **relase**: fix
+- **relase**: test
+- **relase**: fix
+- **relase**: update
+- **relase**: CI auto release correction
 - **Relase-CI**: Create CI autoconfig relase in github Actions
+
+### 🚀 Deployments
+
+- **pypi**: deploy on pip
 
 ## V1.0.3 (2024-04-22)
 
