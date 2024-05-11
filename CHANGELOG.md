@@ -2,6 +2,7 @@
 
 ### 📝💡 Documentation
 
+- **netboxcli**: update documentation in code
 - **netboxcli-docstrings**: add reference tags
 
 ## V1.1.7 (2024-04-24)

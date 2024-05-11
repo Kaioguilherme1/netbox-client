@@ -70,4 +70,4 @@ Agradecemos por seu interesse e paciência enquanto trabalhamos para tornar o Ne
 
 ## :material-license: Licença
 
-Esse projeto esta sob a licença(MIT) - veja o arquivo [Licenca.md](https://github.com/Kaioguilherme1/netbox-client/blob/main/Licenca) para mais detalhes.
+Esse projeto esta sob a licença(MIT) - veja o arquivo [Licence.md](https://github.com/Kaioguilherme1/netbox-client/blob/main/Licence) para mais detalhes.

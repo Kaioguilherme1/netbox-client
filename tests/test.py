@@ -84,4 +84,18 @@ def test_get(obj, modules):
 
 
 modules = get_modules(client)
-# test_get(client, modules)
+
+
+def main():
+
+    if len(sys.argv) > 1:
+        if sys.argv[1] == 'get':
+            test_get(client, modules)
+        else:
+            print('Invalid argument.')
+    else:
+        print('No argument provided.')
+
+
+if __name__ == '__main__':
+    main()
