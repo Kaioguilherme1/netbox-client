@@ -44,6 +44,7 @@ class Core:
         name: str = None,
         tags: list = None,
         search: str = None,
+        filter: str = None,
         limit: int = 1000,
     ) -> dict:
         """
@@ -54,6 +55,7 @@ class Core:
             name: (str): The name of the resource to retrieve.
             tags: (list): List of tags to filter resources.
             search: (str): Search query to filter resources.
+            filter: (str): Filter query especified by the user in to filter resources.
             limit: (int): Maximum number of results to return. Defaults to 1000.
 
         Returns:
@@ -84,6 +86,11 @@ class Core:
                 response = self._netbox._request(
                     'get', f'{self._endpoint}?q={search}&?limit={limit}'
                 )
+
+            if filter:
+                response = self._netbox._request(
+                    'get', f'{self._endpoint}?{filter}&?limit={limit}'
+                )
             else:
                 response = self._netbox._request(
                     'get', f'{self._endpoint}?limit={limit}'
@@ -102,6 +109,7 @@ class Core:
                                 filtered_resources.append(item)
 
                 return response
+
             else:
                 return response
 

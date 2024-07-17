@@ -1,7 +1,13 @@
 ## Unreleased
 
+## V1.2.0 (2024-07-17)
+### ✨ Features
+
+- **Core**: Criação de nova funcionalidade no metodo get que permite passar querys ultilizadas na pagína de filtro
+
 ### 📝💡 Documentation
 
+- **docs**: Create contributing documentation
 - **netboxcli**: update documentation in code
 - **netboxcli-docstrings**: add reference tags
 

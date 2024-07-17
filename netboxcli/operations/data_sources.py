@@ -16,6 +16,7 @@ class DataSources:
         name: str = None,
         tags: list = None,
         search: str = None,
+        filter: str = None,
         limit: int = 1000,
     ) -> dict:
         """
@@ -26,6 +27,7 @@ class DataSources:
             name (str, optional): The name of the resource to retrieve.
             tags (list, optional): List of tags to filter resources.
             search (str, optional): Search query to filter resources.
+            filter (str, optional): Filter query especified by the user in to filter resources.
             limit (int, optional): Maximum number of results to return. Defaults to 1000.
 
         Examples:
@@ -44,6 +46,9 @@ class DataSources:
 
             Get resources by search query:
             >>> result = nb.operations.data_sources.get(search="query")
+
+            Get resources by filter query:
+               >>> result = nb.operations.data_sources.get(filter="assigned_to_interface=True")
 
             Get all resources:
             >>> result = nb.operations.data_sources.get()
